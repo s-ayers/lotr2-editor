@@ -1,0 +1,17 @@
+{
+  "name": "lotr2-editor",
+  "version": "1.0.0",
+  "description": "Lords of the Realm 2 Game Editor",
+  "main": "src/index.ts",
+  "scripts": {
+    "start": "ts-node ./src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^12.12.14",
+    "ts-node": "^8.5.4",
+    "typescript": "^3.7.3"
+  }
+}
