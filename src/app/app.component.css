@@ -263,3 +263,11 @@
       visibility: hidden;
     }
   }
+
+  app-file-drop, app-editor {
+    width: 100%;
+}
+
+ngx-file-drop, .ngx-file-drop__content {
+  height: 500px;
+}
