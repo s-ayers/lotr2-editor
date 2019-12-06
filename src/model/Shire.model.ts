@@ -1,11 +1,15 @@
+import { isNull } from "util";
 
 const o =  {
     POPULATION: 24,
     COWS: 580,
-    HAPPINESS: 0
+    HAPPINESS: 0,
+    WHEAT_UK_1: 372,
+    WHEAT_UK_2: 536
 }
 
 export class Shire {
+    private _id: number;
 
     Happiness: number;
     Unknown_1: number;
@@ -17,9 +21,14 @@ export class Shire {
     Unknown_7: number;
 
     Population: number;
+    Wheat_Unknown_1: number;
+    Wheat_Unknown_2: number;
     Cows: number;
 
-    constructor(buf: Buffer, offset: number = 87124) {
+    constructor(buf: Buffer, offset: number = 87124, id: number = null) {
+        if (!isNull(id)) {
+            this._id = id;
+        }
         this.Happiness = buf.readUInt8(offset + o.HAPPINESS);
 
         this.Unknown_1 = buf.readUInt32LE(offset + 1);
@@ -31,6 +40,9 @@ export class Shire {
         this.Unknown_7 = buf.readUInt32LE(offset + 25);
 
         this.Population = buf.readUInt32LE(offset + o.POPULATION);
+        this.Wheat_Unknown_1 = buf.readUInt32LE(offset + o.WHEAT_UK_1);
+        this.Wheat_Unknown_2 = buf.readUInt32LE(offset + o.WHEAT_UK_2);
+
         this.Cows = buf.readUInt32LE(offset + o.COWS)
     }
 }

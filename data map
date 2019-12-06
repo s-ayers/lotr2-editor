@@ -1,0 +1,983 @@
+Report for Lords Of The Realm 2
+Created by Universal Game Editor
+
+Num.  Variable name            OFFSET  VAR.TYPE         RANGE
+===========================================================================
+   1  Gold Crowns               84864  4 bytes     +/- 2,147,483,648
+   2  Iron                      84872  4 bytes     +/- 2,147,483,648
+   3  Stone                     84880  4 bytes     +/- 2,147,483,648
+   4  Wood                      84888  4 bytes     +/- 2,147,483,648
+   5  # Of Crossbows            84904  4 bytes     +/- 2,147,483,648
+   6  # Of Maces                84908  4 bytes     +/- 2,147,483,648
+   7  # Of Swords               84912  4 bytes     +/- 2,147,483,648
+   8  # Of Pikes                84916  4 bytes     +/- 2,147,483,648
+   9  # Of Bows                 84920  4 bytes     +/- 2,147,483,648
+  10  # Of Knight Armors        84924  4 bytes     +/- 2,147,483,648
+  11  Shire 01 Happiness        87124  1 byte         0 thru 255    
+  12  Shire 01 Population       87148  4 bytes     +/- 2,147,483,648
+  13  Shire 01 Num Of Cows      87704  4 bytes     +/- 2,147,483,648
+  14  Shire 02 Happiness        87892  1 byte         0 thru 255    
+  15  Shire 02 Population       87916  4 bytes     +/- 2,147,483,648
+  16  Shire 02 Num Of Cows      88472  4 bytes     +/- 2,147,483,648
+  17  Shire 03 Happiness        88660  1 byte         0 thru 255    
+  18  Shire 03 Population       88684  4 bytes     +/- 2,147,483,648
+  19  Shire 03 Num Of Cows      89240  4 bytes     +/- 2,147,483,648
+  20  Shire 04 Happiness        89428  1 byte         0 thru 255    
+  21  Shire 04 Population       89452  4 bytes     +/- 2,147,483,648
+  22  Shire 04 Num Of Cows      90008  4 bytes     +/- 2,147,483,648
+  23  Shire 05 Happiness        90196  1 byte         0 thru 255    
+  24  Shire 05 Population       90220  4 bytes     +/- 2,147,483,648
+  25  Shire 05 Num Of Cows      90776  4 bytes     +/- 2,147,483,648
+  26  Shire 06 Happiness        90964  1 byte         0 thru 255    
+  27  Shire 06 Population       90988  4 bytes     +/- 2,147,483,648
+  28  Shire 06 Num Of Cows      91544  4 bytes     +/- 2,147,483,648
+  29  Shire 07 Happiness        91732  1 byte         0 thru 255    
+  30  Shire 07 Population       91756  4 bytes     +/- 2,147,483,648
+  31  Shire 07 Num Of Cows      92312  4 bytes     +/- 2,147,483,648
+  32  Shire 08 Happiness        92500  1 byte         0 thru 255    
+  33  Shire 08 Population       92524  4 bytes     +/- 2,147,483,648
+  34  Shire 08 Num Of Cows      93080  4 bytes     +/- 2,147,483,648
+  35  Shire 09 Happiness        93268  1 byte         0 thru 255    
+  36  Shire 09 Population       93292  4 bytes     +/- 2,147,483,648
+  37  Shire 09 Num Of Cows      93848  4 bytes     +/- 2,147,483,648
+  38  Shire 10 Happiness        94036  1 byte         0 thru 255    
+  39  Shire 10 Population       94060  4 bytes     +/- 2,147,483,648
+  40  Shire 10 Num Of Cows      94616  4 bytes     +/- 2,147,483,648
+  41  Shire 11 Happiness        94804  1 byte         0 thru 255    
+  42  Shire 11 Population       94828  4 bytes     +/- 2,147,483,648
+  43  Shire 11 Num Of Cows      95384  4 bytes     +/- 2,147,483,648
+  44  Shire 12 Happiness        95572  1 byte         0 thru 255    
+  45  Shire 12 Population       95596  4 bytes     +/- 2,147,483,648
+  46  Shire 12 Num Of Cows      96152  4 bytes     +/- 2,147,483,648
+  47  Shire 13 Happiness        96340  1 byte         0 thru 255    
+  48  Shire 13 Population       96364  4 bytes     +/- 2,147,483,648
+  49  Shire 13 Num Of Cows      96920  4 bytes     +/- 2,147,483,648
+  50  Shire 14 Happiness        97108  1 byte         0 thru 255    
+  51  Shire 14 Population       97132  4 bytes     +/- 2,147,483,648
+  52  Shire 14 Num Of Cows      97688  4 bytes     +/- 2,147,483,648
+  53  Shire 15 Happiness        97876  1 byte         0 thru 255    
+  54  Shire 15 Population       97900  4 bytes     +/- 2,147,483,648
+  55  Shire 15 Num Of Cows      98456  4 bytes     +/- 2,147,483,648
+  56  Shire 16 Happiness        98644  1 byte         0 thru 255    
+  57  Shire 16 Population       98668  4 bytes     +/- 2,147,483,648
+  58  Shire 16 Num Of Cows      99224  4 bytes     +/- 2,147,483,648
+  59  Army 001 Total # Men      99760  4 bytes     +/- 2,147,483,648
+  60  Army 001 Peasants         99764  2 bytes        +/- 32,767    
+  61  Army 001 Cbowmen          99766  2 bytes        +/- 32,767    
+  62  Army 001 Macemen          99768  2 bytes        +/- 32,767    
+  63  Army 001 Swordsmen        99770  2 bytes        +/- 32,767    
+  64  Army 001 Pikemen          99772  2 bytes        +/- 32,767    
+  65  Army 001 Bowmen           99774  2 bytes        +/- 32,767    
+  66  Army 001 Knights          99776  2 bytes        +/- 32,767    
+  67  Army 002 Total # Men     100180  4 bytes     +/- 2,147,483,648
+  68  Army 002 Peasants        100184  2 bytes        +/- 32,767    
+  69  Army 002 Cbowmen         100186  2 bytes        +/- 32,767    
+  70  Army 002 Macemen         100188  2 bytes        +/- 32,767    
+  71  Army 002 Swordsmen       100190  2 bytes        +/- 32,767    
+  72  Army 002 Pikemen         100192  2 bytes        +/- 32,767    
+  73  Army 002 Bowmen          100194  2 bytes        +/- 32,767    
+  74  Army 002 Knights         100196  2 bytes        +/- 32,767    
+  75  Army 003 Total # Men     100600  4 bytes     +/- 2,147,483,648
+  76  Army 003 Peasants        100604  2 bytes        +/- 32,767    
+  77  Army 003 Cbowmen         100606  2 bytes        +/- 32,767    
+  78  Army 003 Macemen         100608  2 bytes        +/- 32,767    
+  79  Army 003 Swordsmen       100610  2 bytes        +/- 32,767    
+  80  Army 003 Pikemen         100612  2 bytes        +/- 32,767    
+  81  Army 003 Bowmen          100614  2 bytes        +/- 32,767    
+  82  Army 003 Knights         100616  2 bytes        +/- 32,767    
+  83  Army 004 Total # Men     101020  4 bytes     +/- 2,147,483,648
+  84  Army 004 Peasants        101024  2 bytes        +/- 32,767    
+  85  Army 004 Cbowmen         101026  2 bytes        +/- 32,767    
+  86  Army 004 Macemen         101028  2 bytes        +/- 32,767    
+  87  Army 004 Swordsmen       101030  2 bytes        +/- 32,767    
+  88  Army 004 Pikemen         101032  2 bytes        +/- 32,767    
+  89  Army 004 Bowmen          101034  2 bytes        +/- 32,767    
+  90  Army 004 Knights         101036  2 bytes        +/- 32,767    
+  91  Army 005 Total # Men     101440  4 bytes     +/- 2,147,483,648
+  92  Army 005 Peasants        101444  2 bytes        +/- 32,767    
+  93  Army 005 Cbowmen         101446  2 bytes        +/- 32,767    
+  94  Army 005 Macemen         101448  2 bytes        +/- 32,767    
+  95  Army 005 Swordsmen       101450  2 bytes        +/- 32,767    
+  96  Army 005 Pikemen         101452  2 bytes        +/- 32,767    
+  97  Army 005 Bowmen          101454  2 bytes        +/- 32,767    
+  98  Army 005 Knights         101456  2 bytes        +/- 32,767    
+  99  Army 006 Total # Men     101860  4 bytes     +/- 2,147,483,648
+ 100  Army 006 Peasants        101864  2 bytes        +/- 32,767    
+ 101  Army 006 Cbowmen         101866  2 bytes        +/- 32,767    
+ 102  Army 006 Macemen         101868  2 bytes        +/- 32,767    
+ 103  Army 006 Swordsmen       101870  2 bytes        +/- 32,767    
+ 104  Army 006 Pikemen         101872  2 bytes        +/- 32,767    
+ 105  Army 006 Bowmen          101874  2 bytes        +/- 32,767    
+ 106  Army 006 Knights         101876  2 bytes        +/- 32,767    
+ 107  Army 007 Total # Men     102280  4 bytes     +/- 2,147,483,648
+ 108  Army 007 Peasants        102284  2 bytes        +/- 32,767    
+ 109  Army 007 Cbowmen         102286  2 bytes        +/- 32,767    
+ 110  Army 007 Macemen         102288  2 bytes        +/- 32,767    
+ 111  Army 007 Swordsmen       102290  2 bytes        +/- 32,767    
+ 112  Army 007 Pikemen         102292  2 bytes        +/- 32,767    
+ 113  Army 007 Bowmen          102294  2 bytes        +/- 32,767    
+ 114  Army 007 Knights         102296  2 bytes        +/- 32,767    
+ 115  Army 008 Total # Men     102700  4 bytes     +/- 2,147,483,648
+ 116  Army 008 Peasants        102704  2 bytes        +/- 32,767    
+ 117  Army 008 Cbowmen         102706  2 bytes        +/- 32,767    
+ 118  Army 008 Macemen         102708  2 bytes        +/- 32,767    
+ 119  Army 008 Swordsmen       102710  2 bytes        +/- 32,767    
+ 120  Army 008 Pikemen         102712  2 bytes        +/- 32,767    
+ 121  Army 008 Bowmen          102714  2 bytes        +/- 32,767    
+ 122  Army 008 Knights         102716  2 bytes        +/- 32,767    
+ 123  Army 009 Total # Men     103120  4 bytes     +/- 2,147,483,648
+ 124  Army 009 Peasants        103124  2 bytes        +/- 32,767    
+ 125  Army 009 Cbowmen         103126  2 bytes        +/- 32,767    
+ 126  Army 009 Macemen         103128  2 bytes        +/- 32,767    
+ 127  Army 009 Swordsmen       103130  2 bytes        +/- 32,767    
+ 128  Army 009 Pikemen         103132  2 bytes        +/- 32,767    
+ 129  Army 009 Bowmen          103134  2 bytes        +/- 32,767    
+ 130  Army 009 Knights         103136  2 bytes        +/- 32,767    
+ 131  Army 010 Total # Men     103540  4 bytes     +/- 2,147,483,648
+ 132  Army 010 Peasants        103544  2 bytes        +/- 32,767    
+ 133  Army 010 Cbowmen         103546  2 bytes        +/- 32,767    
+ 134  Army 010 Macemen         103548  2 bytes        +/- 32,767    
+ 135  Army 010 Swordsmen       103550  2 bytes        +/- 32,767    
+ 136  Army 010 Pikemen         103552  2 bytes        +/- 32,767    
+ 137  Army 010 Bowmen          103554  2 bytes        +/- 32,767    
+ 138  Army 010 Knights         103556  2 bytes        +/- 32,767    
+ 139  Army 011 Total # Men     103960  4 bytes     +/- 2,147,483,648
+ 140  Army 011 Peasants        103964  2 bytes        +/- 32,767    
+ 141  Army 011 Cbowmen         103966  2 bytes        +/- 32,767    
+ 142  Army 011 Macemen         103968  2 bytes        +/- 32,767    
+ 143  Army 011 Swordsmen       103970  2 bytes        +/- 32,767    
+ 144  Army 011 Pikemen         103972  2 bytes        +/- 32,767    
+ 145  Army 011 Bowmen          103974  2 bytes        +/- 32,767    
+ 146  Army 011 Knights         103976  2 bytes        +/- 32,767    
+ 147  Army 012 Total # Men     104380  4 bytes     +/- 2,147,483,648
+ 148  Army 012 Peasants        104384  2 bytes        +/- 32,767    
+ 149  Army 012 Cbowmen         104386  2 bytes        +/- 32,767    
+ 150  Army 012 Macemen         104388  2 bytes        +/- 32,767    
+ 151  Army 012 Swordsmen       104390  2 bytes        +/- 32,767    
+ 152  Army 012 Pikemen         104392  2 bytes        +/- 32,767    
+ 153  Army 012 Bowmen          104394  2 bytes        +/- 32,767    
+ 154  Army 012 Knights         104396  2 bytes        +/- 32,767    
+ 155  Army 013 Total # Men     104800  4 bytes     +/- 2,147,483,648
+ 156  Army 013 Peasants        104804  2 bytes        +/- 32,767    
+ 157  Army 013 Cbowmen         104806  2 bytes        +/- 32,767    
+ 158  Army 013 Macemen         104808  2 bytes        +/- 32,767    
+ 159  Army 013 Swordsmen       104810  2 bytes        +/- 32,767    
+ 160  Army 013 Pikemen         104812  2 bytes        +/- 32,767    
+ 161  Army 013 Bowmen          104814  2 bytes        +/- 32,767    
+ 162  Army 013 Knights         104816  2 bytes        +/- 32,767    
+ 163  Army 014 Total # Men     105220  4 bytes     +/- 2,147,483,648
+ 164  Army 014 Peasants        105224  2 bytes        +/- 32,767    
+ 165  Army 014 Cbowmen         105226  2 bytes        +/- 32,767    
+ 166  Army 014 Macemen         105228  2 bytes        +/- 32,767    
+ 167  Army 014 Swordsmen       105230  2 bytes        +/- 32,767    
+ 168  Army 014 Pikemen         105232  2 bytes        +/- 32,767    
+ 169  Army 014 Bowmen          105234  2 bytes        +/- 32,767    
+ 170  Army 014 Knights         105236  2 bytes        +/- 32,767    
+ 171  Army 015 Total # Men     105640  4 bytes     +/- 2,147,483,648
+ 172  Army 015 Peasants        105644  2 bytes        +/- 32,767    
+ 173  Army 015 Cbowmen         105646  2 bytes        +/- 32,767    
+ 174  Army 015 Macemen         105648  2 bytes        +/- 32,767    
+ 175  Army 015 Swordsmen       105650  2 bytes        +/- 32,767    
+ 176  Army 015 Pikemen         105652  2 bytes        +/- 32,767    
+ 177  Army 015 Bowmen          105654  2 bytes        +/- 32,767    
+ 178  Army 015 Knights         105656  2 bytes        +/- 32,767    
+ 179  Army 016 Total # Men     106060  4 bytes     +/- 2,147,483,648
+ 180  Army 016 Peasants        106064  2 bytes        +/- 32,767    
+ 181  Army 016 Cbowmen         106066  2 bytes        +/- 32,767    
+ 182  Army 016 Macemen         106068  2 bytes        +/- 32,767    
+ 183  Army 016 Swordsmen       106070  2 bytes        +/- 32,767    
+ 184  Army 016 Pikemen         106072  2 bytes        +/- 32,767    
+ 185  Army 016 Bowmen          106074  2 bytes        +/- 32,767    
+ 186  Army 016 Knights         106076  2 bytes        +/- 32,767    
+ 187  Army 017 Total # Men     106480  4 bytes     +/- 2,147,483,648
+ 188  Army 017 Peasants        106484  2 bytes        +/- 32,767    
+ 189  Army 017 Cbowmen         106486  2 bytes        +/- 32,767    
+ 190  Army 017 Macemen         106488  2 bytes        +/- 32,767    
+ 191  Army 017 Swordsmen       106490  2 bytes        +/- 32,767    
+ 192  Army 017 Pikemen         106492  2 bytes        +/- 32,767    
+ 193  Army 017 Bowmen          106494  2 bytes        +/- 32,767    
+ 194  Army 017 Knights         106496  2 bytes        +/- 32,767    
+ 195  Army 018 Total # Men     106900  4 bytes     +/- 2,147,483,648
+ 196  Army 018 Peasants        106904  2 bytes        +/- 32,767    
+ 197  Army 018 Cbowmen         106906  2 bytes        +/- 32,767    
+ 198  Army 018 Macemen         106908  2 bytes        +/- 32,767    
+ 199  Army 018 Swordsmen       106910  2 bytes        +/- 32,767    
+ 200  Army 018 Pikemen         106912  2 bytes        +/- 32,767    
+ 201  Army 018 Bowmen          106914  2 bytes        +/- 32,767    
+ 202  Army 018 Knights         106916  2 bytes        +/- 32,767    
+ 203  Army 019 Total # Men     107320  4 bytes     +/- 2,147,483,648
+ 204  Army 019 Peasants        107324  2 bytes        +/- 32,767    
+ 205  Army 019 Cbowmen         107326  2 bytes        +/- 32,767    
+ 206  Army 019 Macemen         107328  2 bytes        +/- 32,767    
+ 207  Army 019 Swordsmen       107330  2 bytes        +/- 32,767    
+ 208  Army 019 Pikemen         107332  2 bytes        +/- 32,767    
+ 209  Army 019 Bowmen          107334  2 bytes        +/- 32,767    
+ 210  Army 019 Knights         107336  2 bytes        +/- 32,767    
+ 211  Army 020 Total # Men     107740  4 bytes     +/- 2,147,483,648
+ 212  Army 020 Peasants        107744  2 bytes        +/- 32,767    
+ 213  Army 020 Cbowmen         107746  2 bytes        +/- 32,767    
+ 214  Army 020 Macemen         107748  2 bytes        +/- 32,767    
+ 215  Army 020 Swordsmen       107750  2 bytes        +/- 32,767    
+ 216  Army 020 Pikemen         107752  2 bytes        +/- 32,767    
+ 217  Army 020 Bowmen          107754  2 bytes        +/- 32,767    
+ 218  Army 020 Knights         107756  2 bytes        +/- 32,767    
+ 219  Army 021 Total # Men     108160  4 bytes     +/- 2,147,483,648
+ 220  Army 021 Peasants        108164  2 bytes        +/- 32,767    
+ 221  Army 021 Cbowmen         108166  2 bytes        +/- 32,767    
+ 222  Army 021 Macemen         108168  2 bytes        +/- 32,767    
+ 223  Army 021 Swordsmen       108170  2 bytes        +/- 32,767    
+ 224  Army 021 Pikemen         108172  2 bytes        +/- 32,767    
+ 225  Army 021 Bowmen          108174  2 bytes        +/- 32,767    
+ 226  Army 021 Knights         108176  2 bytes        +/- 32,767    
+ 227  Army 022 Total # Men     108580  4 bytes     +/- 2,147,483,648
+ 228  Army 022 Peasants        108584  2 bytes        +/- 32,767    
+ 229  Army 022 Cbowmen         108586  2 bytes        +/- 32,767    
+ 230  Army 022 Macemen         108588  2 bytes        +/- 32,767    
+ 231  Army 022 Swordsmen       108590  2 bytes        +/- 32,767    
+ 232  Army 022 Pikemen         108592  2 bytes        +/- 32,767    
+ 233  Army 022 Bowmen          108594  2 bytes        +/- 32,767    
+ 234  Army 022 Knights         108596  2 bytes        +/- 32,767    
+ 235  Army 023 Total # Men     109000  4 bytes     +/- 2,147,483,648
+ 236  Army 023 Peasants        109004  2 bytes        +/- 32,767    
+ 237  Army 023 Cbowmen         109006  2 bytes        +/- 32,767    
+ 238  Army 023 Macemen         109008  2 bytes        +/- 32,767    
+ 239  Army 023 Swordsmen       109010  2 bytes        +/- 32,767    
+ 240  Army 023 Pikemen         109012  2 bytes        +/- 32,767    
+ 241  Army 023 Bowmen          109014  2 bytes        +/- 32,767    
+ 242  Army 023 Knights         109016  2 bytes        +/- 32,767    
+ 243  Army 024 Total # Men     109420  4 bytes     +/- 2,147,483,648
+ 244  Army 024 Peasants        109424  2 bytes        +/- 32,767    
+ 245  Army 024 Cbowmen         109426  2 bytes        +/- 32,767    
+ 246  Army 024 Macemen         109428  2 bytes        +/- 32,767    
+ 247  Army 024 Swordsmen       109430  2 bytes        +/- 32,767    
+ 248  Army 024 Pikemen         109432  2 bytes        +/- 32,767    
+ 249  Army 024 Bowmen          109434  2 bytes        +/- 32,767    
+ 250  Army 024 Knights         109436  2 bytes        +/- 32,767    
+ 251  Army 025 Total # Men     109840  4 bytes     +/- 2,147,483,648
+ 252  Army 025 Peasants        109844  2 bytes        +/- 32,767    
+ 253  Army 025 Cbowmen         109846  2 bytes        +/- 32,767    
+ 254  Army 025 Macemen         109848  2 bytes        +/- 32,767    
+ 255  Army 025 Swordsmen       109850  2 bytes        +/- 32,767    
+ 256  Army 025 Pikemen         109852  2 bytes        +/- 32,767    
+ 257  Army 025 Bowmen          109854  2 bytes        +/- 32,767    
+ 258  Army 025 Knights         109856  2 bytes        +/- 32,767    
+ 259  Army 026 Total # Men     110260  4 bytes     +/- 2,147,483,648
+ 260  Army 026 Peasants        110264  2 bytes        +/- 32,767    
+ 261  Army 026 Cbowmen         110266  2 bytes        +/- 32,767    
+ 262  Army 026 Macemen         110268  2 bytes        +/- 32,767    
+ 263  Army 026 Swordsmen       110270  2 bytes        +/- 32,767    
+ 264  Army 026 Pikemen         110272  2 bytes        +/- 32,767    
+ 265  Army 026 Bowmen          110274  2 bytes        +/- 32,767    
+ 266  Army 026 Knights         110276  2 bytes        +/- 32,767    
+ 267  Army 027 Total # Men     110680  4 bytes     +/- 2,147,483,648
+ 268  Army 027 Peasants        110684  2 bytes        +/- 32,767    
+ 269  Army 027 Cbowmen         110686  2 bytes        +/- 32,767    
+ 270  Army 027 Macemen         110688  2 bytes        +/- 32,767    
+ 271  Army 027 Swordsmen       110690  2 bytes        +/- 32,767    
+ 272  Army 027 Pikemen         110692  2 bytes        +/- 32,767    
+ 273  Army 027 Bowmen          110694  2 bytes        +/- 32,767    
+ 274  Army 027 Knights         110696  2 bytes        +/- 32,767    
+ 275  Army 028 Total # Men     111100  4 bytes     +/- 2,147,483,648
+ 276  Army 028 Peasants        111104  2 bytes        +/- 32,767    
+ 277  Army 028 Cbowmen         111106  2 bytes        +/- 32,767    
+ 278  Army 028 Macemen         111108  2 bytes        +/- 32,767    
+ 279  Army 028 Swordsmen       111110  2 bytes        +/- 32,767    
+ 280  Army 028 Pikemen         111112  2 bytes        +/- 32,767    
+ 281  Army 028 Bowmen          111114  2 bytes        +/- 32,767    
+ 282  Army 028 Knights         111116  2 bytes        +/- 32,767    
+ 283  Army 029 Total # Men     111520  4 bytes     +/- 2,147,483,648
+ 284  Army 029 Peasants        111524  2 bytes        +/- 32,767    
+ 285  Army 029 Cbowmen         111526  2 bytes        +/- 32,767    
+ 286  Army 029 Macemen         111528  2 bytes        +/- 32,767    
+ 287  Army 029 Swordsmen       111530  2 bytes        +/- 32,767    
+ 288  Army 029 Pikemen         111532  2 bytes        +/- 32,767    
+ 289  Army 029 Bowmen          111534  2 bytes        +/- 32,767    
+ 290  Army 029 Knights         111536  2 bytes        +/- 32,767    
+ 291  Army 030 Total # Men     111940  4 bytes     +/- 2,147,483,648
+ 292  Army 030 Peasants        111944  2 bytes        +/- 32,767    
+ 293  Army 030 Cbowmen         111946  2 bytes        +/- 32,767    
+ 294  Army 030 Macemen         111948  2 bytes        +/- 32,767    
+ 295  Army 030 Swordsmen       111950  2 bytes        +/- 32,767    
+ 296  Army 030 Pikemen         111952  2 bytes        +/- 32,767    
+ 297  Army 030 Bowmen          111954  2 bytes        +/- 32,767    
+ 298  Army 030 Knights         111956  2 bytes        +/- 32,767    
+ 299  Army 031 Total # Men     112360  4 bytes     +/- 2,147,483,648
+ 300  Army 031 Peasants        112364  2 bytes        +/- 32,767    
+ 301  Army 031 Cbowmen         112366  2 bytes        +/- 32,767    
+ 302  Army 031 Macemen         112368  2 bytes        +/- 32,767    
+ 303  Army 031 Swordsmen       112370  2 bytes        +/- 32,767    
+ 304  Army 031 Pikemen         112372  2 bytes        +/- 32,767    
+ 305  Army 031 Bowmen          112374  2 bytes        +/- 32,767    
+ 306  Army 031 Knights         112376  2 bytes        +/- 32,767    
+ 307  Army 032 Total # Men     112780  4 bytes     +/- 2,147,483,648
+ 308  Army 032 Peasants        112784  2 bytes        +/- 32,767    
+ 309  Army 032 Cbowmen         112786  2 bytes        +/- 32,767    
+ 310  Army 032 Macemen         112788  2 bytes        +/- 32,767    
+ 311  Army 032 Swordsmen       112790  2 bytes        +/- 32,767    
+ 312  Army 032 Pikemen         112792  2 bytes        +/- 32,767    
+ 313  Army 032 Bowmen          112794  2 bytes        +/- 32,767    
+ 314  Army 032 Knights         112796  2 bytes        +/- 32,767    
+ 315  Army 033 Total # Men     113200  4 bytes     +/- 2,147,483,648
+ 316  Army 033 Peasants        113204  2 bytes        +/- 32,767    
+ 317  Army 033 Cbowmen         113206  2 bytes        +/- 32,767    
+ 318  Army 033 Macemen         113208  2 bytes        +/- 32,767    
+ 319  Army 033 Swordsmen       113210  2 bytes        +/- 32,767    
+ 320  Army 033 Pikemen         113212  2 bytes        +/- 32,767    
+ 321  Army 033 Bowmen          113214  2 bytes        +/- 32,767    
+ 322  Army 033 Knights         113216  2 bytes        +/- 32,767    
+ 323  Army 034 Total # Men     113620  4 bytes     +/- 2,147,483,648
+ 324  Army 034 Peasants        113624  2 bytes        +/- 32,767    
+ 325  Army 034 Cbowmen         113626  2 bytes        +/- 32,767    
+ 326  Army 034 Macemen         113628  2 bytes        +/- 32,767    
+ 327  Army 034 Swordsmen       113630  2 bytes        +/- 32,767    
+ 328  Army 034 Pikemen         113632  2 bytes        +/- 32,767    
+ 329  Army 034 Bowmen          113634  2 bytes        +/- 32,767    
+ 330  Army 034 Knights         113636  2 bytes        +/- 32,767    
+ 331  Army 035 Total # Men     114040  4 bytes     +/- 2,147,483,648
+ 332  Army 035 Peasants        114044  2 bytes        +/- 32,767    
+ 333  Army 035 Cbowmen         114046  2 bytes        +/- 32,767    
+ 334  Army 035 Macemen         114048  2 bytes        +/- 32,767    
+ 335  Army 035 Swordsmen       114050  2 bytes        +/- 32,767    
+ 336  Army 035 Pikemen         114052  2 bytes        +/- 32,767    
+ 337  Army 035 Bowmen          114054  2 bytes        +/- 32,767    
+ 338  Army 035 Knights         114056  2 bytes        +/- 32,767    
+ 339  Army 036 Total # Men     114460  4 bytes     +/- 2,147,483,648
+ 340  Army 036 Peasants        114464  2 bytes        +/- 32,767    
+ 341  Army 036 Cbowmen         114466  2 bytes        +/- 32,767    
+ 342  Army 036 Macemen         114468  2 bytes        +/- 32,767    
+ 343  Army 036 Swordsmen       114470  2 bytes        +/- 32,767    
+ 344  Army 036 Pikemen         114472  2 bytes        +/- 32,767    
+ 345  Army 036 Bowmen          114474  2 bytes        +/- 32,767    
+ 346  Army 036 Knights         114476  2 bytes        +/- 32,767    
+ 347  Army 037 Total # Men     114880  4 bytes     +/- 2,147,483,648
+ 348  Army 037 Peasants        114884  2 bytes        +/- 32,767    
+ 349  Army 037 Cbowmen         114886  2 bytes        +/- 32,767    
+ 350  Army 037 Macemen         114888  2 bytes        +/- 32,767    
+ 351  Army 037 Swordsmen       114890  2 bytes        +/- 32,767    
+ 352  Army 037 Pikemen         114892  2 bytes        +/- 32,767    
+ 353  Army 037 Bowmen          114894  2 bytes        +/- 32,767    
+ 354  Army 037 Knights         114896  2 bytes        +/- 32,767    
+ 355  Army 038 Total # Men     115300  4 bytes     +/- 2,147,483,648
+ 356  Army 038 Peasants        115304  2 bytes        +/- 32,767    
+ 357  Army 038 Cbowmen         115306  2 bytes        +/- 32,767    
+ 358  Army 038 Macemen         115308  2 bytes        +/- 32,767    
+ 359  Army 038 Swordsmen       115310  2 bytes        +/- 32,767    
+ 360  Army 038 Pikemen         115312  2 bytes        +/- 32,767    
+ 361  Army 038 Bowmen          115314  2 bytes        +/- 32,767    
+ 362  Army 038 Knights         115316  2 bytes        +/- 32,767    
+ 363  Army 039 Total # Men     115720  4 bytes     +/- 2,147,483,648
+ 364  Army 039 Peasants        115724  2 bytes        +/- 32,767    
+ 365  Army 039 Cbowmen         115726  2 bytes        +/- 32,767    
+ 366  Army 039 Macemen         115728  2 bytes        +/- 32,767    
+ 367  Army 039 Swordsmen       115730  2 bytes        +/- 32,767    
+ 368  Army 039 Pikemen         115732  2 bytes        +/- 32,767    
+ 369  Army 039 Bowmen          115734  2 bytes        +/- 32,767    
+ 370  Army 039 Knights         115736  2 bytes        +/- 32,767    
+ 371  Army 040 Total # Men     116140  4 bytes     +/- 2,147,483,648
+ 372  Army 040 Peasants        116144  2 bytes        +/- 32,767    
+ 373  Army 040 Cbowmen         116146  2 bytes        +/- 32,767    
+ 374  Army 040 Macemen         116148  2 bytes        +/- 32,767    
+ 375  Army 040 Swordsmen       116150  2 bytes        +/- 32,767    
+ 376  Army 040 Pikemen         116152  2 bytes        +/- 32,767    
+ 377  Army 040 Bowmen          116154  2 bytes        +/- 32,767    
+ 378  Army 040 Knights         116156  2 bytes        +/- 32,767    
+ 379  Army 041 Total # Men     116560  4 bytes     +/- 2,147,483,648
+ 380  Army 041 Peasants        116564  2 bytes        +/- 32,767    
+ 381  Army 041 Cbowmen         116566  2 bytes        +/- 32,767    
+ 382  Army 041 Macemen         116568  2 bytes        +/- 32,767    
+ 383  Army 041 Swordsmen       116570  2 bytes        +/- 32,767    
+ 384  Army 041 Pikemen         116572  2 bytes        +/- 32,767    
+ 385  Army 041 Bowmen          116574  2 bytes        +/- 32,767    
+ 386  Army 041 Knights         116576  2 bytes        +/- 32,767    
+ 387  Army 042 Total # Men     116980  4 bytes     +/- 2,147,483,648
+ 388  Army 042 Peasants        116984  2 bytes        +/- 32,767    
+ 389  Army 042 Cbowmen         116986  2 bytes        +/- 32,767    
+ 390  Army 042 Macemen         116988  2 bytes        +/- 32,767    
+ 391  Army 042 Swordsmen       116990  2 bytes        +/- 32,767    
+ 392  Army 042 Pikemen         116992  2 bytes        +/- 32,767    
+ 393  Army 042 Bowmen          116994  2 bytes        +/- 32,767    
+ 394  Army 042 Knights         116996  2 bytes        +/- 32,767    
+ 395  Army 043 Total # Men     117400  4 bytes     +/- 2,147,483,648
+ 396  Army 043 Peasants        117404  2 bytes        +/- 32,767    
+ 397  Army 043 Cbowmen         117406  2 bytes        +/- 32,767    
+ 398  Army 043 Macemen         117408  2 bytes        +/- 32,767    
+ 399  Army 043 Swordsmen       117410  2 bytes        +/- 32,767    
+ 400  Army 043 Pikemen         117412  2 bytes        +/- 32,767    
+ 401  Army 043 Bowmen          117414  2 bytes        +/- 32,767    
+ 402  Army 043 Knights         117416  2 bytes        +/- 32,767    
+ 403  Army 044 Total # Men     117820  4 bytes     +/- 2,147,483,648
+ 404  Army 044 Peasants        117824  2 bytes        +/- 32,767    
+ 405  Army 044 Cbowmen         117826  2 bytes        +/- 32,767    
+ 406  Army 044 Macemen         117828  2 bytes        +/- 32,767    
+ 407  Army 044 Swordsmen       117830  2 bytes        +/- 32,767    
+ 408  Army 044 Pikemen         117832  2 bytes        +/- 32,767    
+ 409  Army 044 Bowmen          117834  2 bytes        +/- 32,767    
+ 410  Army 044 Knights         117836  2 bytes        +/- 32,767    
+ 411  Army 045 Total # Men     118240  4 bytes     +/- 2,147,483,648
+ 412  Army 045 Peasants        118244  2 bytes        +/- 32,767    
+ 413  Army 045 Cbowmen         118246  2 bytes        +/- 32,767    
+ 414  Army 045 Macemen         118248  2 bytes        +/- 32,767    
+ 415  Army 045 Swordsmen       118250  2 bytes        +/- 32,767    
+ 416  Army 045 Pikemen         118252  2 bytes        +/- 32,767    
+ 417  Army 045 Bowmen          118254  2 bytes        +/- 32,767    
+ 418  Army 045 Knights         118256  2 bytes        +/- 32,767    
+ 419  Army 046 Total # Men     118660  4 bytes     +/- 2,147,483,648
+ 420  Army 046 Peasants        118664  2 bytes        +/- 32,767    
+ 421  Army 046 Cbowmen         118666  2 bytes        +/- 32,767    
+ 422  Army 046 Macemen         118668  2 bytes        +/- 32,767    
+ 423  Army 046 Swordsmen       118670  2 bytes        +/- 32,767    
+ 424  Army 046 Pikemen         118672  2 bytes        +/- 32,767    
+ 425  Army 046 Bowmen          118674  2 bytes        +/- 32,767    
+ 426  Army 046 Knights         118676  2 bytes        +/- 32,767    
+ 427  Army 047 Total # Men     119080  4 bytes     +/- 2,147,483,648
+ 428  Army 047 Peasants        119084  2 bytes        +/- 32,767    
+ 429  Army 047 Cbowmen         119086  2 bytes        +/- 32,767    
+ 430  Army 047 Macemen         119088  2 bytes        +/- 32,767    
+ 431  Army 047 Swordsmen       119090  2 bytes        +/- 32,767    
+ 432  Army 047 Pikemen         119092  2 bytes        +/- 32,767    
+ 433  Army 047 Bowmen          119094  2 bytes        +/- 32,767    
+ 434  Army 047 Knights         119096  2 bytes        +/- 32,767    
+ 435  Army 048 Total # Men     119500  4 bytes     +/- 2,147,483,648
+ 436  Army 048 Peasants        119504  2 bytes        +/- 32,767    
+ 437  Army 048 Cbowmen         119506  2 bytes        +/- 32,767    
+ 438  Army 048 Macemen         119508  2 bytes        +/- 32,767    
+ 439  Army 048 Swordsmen       119510  2 bytes        +/- 32,767    
+ 440  Army 048 Pikemen         119512  2 bytes        +/- 32,767    
+ 441  Army 048 Bowmen          119514  2 bytes        +/- 32,767    
+ 442  Army 048 Knights         119516  2 bytes        +/- 32,767    
+ 443  Army 049 Total # Men     119920  4 bytes     +/- 2,147,483,648
+ 444  Army 049 Peasants        119924  2 bytes        +/- 32,767    
+ 445  Army 049 Cbowmen         119926  2 bytes        +/- 32,767    
+ 446  Army 049 Macemen         119928  2 bytes        +/- 32,767    
+ 447  Army 049 Swordsmen       119930  2 bytes        +/- 32,767    
+ 448  Army 049 Pikemen         119932  2 bytes        +/- 32,767    
+ 449  Army 049 Bowmen          119934  2 bytes        +/- 32,767    
+ 450  Army 049 Knights         119936  2 bytes        +/- 32,767    
+ 451  Army 050 Total # Men     120340  4 bytes     +/- 2,147,483,648
+ 452  Army 050 Peasants        120344  2 bytes        +/- 32,767    
+ 453  Army 050 Cbowmen         120346  2 bytes        +/- 32,767    
+ 454  Army 050 Macemen         120348  2 bytes        +/- 32,767    
+ 455  Army 050 Swordsmen       120350  2 bytes        +/- 32,767    
+ 456  Army 050 Pikemen         120352  2 bytes        +/- 32,767    
+ 457  Army 050 Bowmen          120354  2 bytes        +/- 32,767    
+ 458  Army 050 Knights         120356  2 bytes        +/- 32,767    
+ 459  Army 051 Total # Men     120760  4 bytes     +/- 2,147,483,648
+ 460  Army 051 Peasants        120764  2 bytes        +/- 32,767    
+ 461  Army 051 Cbowmen         120766  2 bytes        +/- 32,767    
+ 462  Army 051 Macemen         120768  2 bytes        +/- 32,767    
+ 463  Army 051 Swordsmen       120770  2 bytes        +/- 32,767    
+ 464  Army 051 Pikemen         120772  2 bytes        +/- 32,767    
+ 465  Army 051 Bowmen          120774  2 bytes        +/- 32,767    
+ 466  Army 051 Knights         120776  2 bytes        +/- 32,767    
+ 467  Army 052 Total # Men     121180  4 bytes     +/- 2,147,483,648
+ 468  Army 052 Peasants        121184  2 bytes        +/- 32,767    
+ 469  Army 052 Cbowmen         121186  2 bytes        +/- 32,767    
+ 470  Army 052 Macemen         121188  2 bytes        +/- 32,767    
+ 471  Army 052 Swordsmen       121190  2 bytes        +/- 32,767    
+ 472  Army 052 Pikemen         121192  2 bytes        +/- 32,767    
+ 473  Army 052 Bowmen          121194  2 bytes        +/- 32,767    
+ 474  Army 052 Knights         121196  2 bytes        +/- 32,767    
+ 475  Army 053 Total # Men     121600  4 bytes     +/- 2,147,483,648
+ 476  Army 053 Peasants        121604  2 bytes        +/- 32,767    
+ 477  Army 053 Cbowmen         121606  2 bytes        +/- 32,767    
+ 478  Army 053 Macemen         121608  2 bytes        +/- 32,767    
+ 479  Army 053 Swordsmen       121610  2 bytes        +/- 32,767    
+ 480  Army 053 Pikemen         121612  2 bytes        +/- 32,767    
+ 481  Army 053 Bowmen          121614  2 bytes        +/- 32,767    
+ 482  Army 053 Knights         121616  2 bytes        +/- 32,767    
+ 483  Army 054 Total # Men     122020  4 bytes     +/- 2,147,483,648
+ 484  Army 054 Peasants        122024  2 bytes        +/- 32,767    
+ 485  Army 054 Cbowmen         122026  2 bytes        +/- 32,767    
+ 486  Army 054 Macemen         122028  2 bytes        +/- 32,767    
+ 487  Army 054 Swordsmen       122030  2 bytes        +/- 32,767    
+ 488  Army 054 Pikemen         122032  2 bytes        +/- 32,767    
+ 489  Army 054 Bowmen          122034  2 bytes        +/- 32,767    
+ 490  Army 054 Knights         122036  2 bytes        +/- 32,767    
+ 491  Army 055 Total # Men     122440  4 bytes     +/- 2,147,483,648
+ 492  Army 055 Peasants        122444  2 bytes        +/- 32,767    
+ 493  Army 055 Cbowmen         122446  2 bytes        +/- 32,767    
+ 494  Army 055 Macemen         122448  2 bytes        +/- 32,767    
+ 495  Army 055 Swordsmen       122450  2 bytes        +/- 32,767    
+ 496  Army 055 Pikemen         122452  2 bytes        +/- 32,767    
+ 497  Army 055 Bowmen          122454  2 bytes        +/- 32,767    
+ 498  Army 055 Knights         122456  2 bytes        +/- 32,767    
+ 499  Army 056 Total # Men     122860  4 bytes     +/- 2,147,483,648
+ 500  Army 056 Peasants        122864  2 bytes        +/- 32,767    
+ 501  Army 056 Cbowmen         122866  2 bytes        +/- 32,767    
+ 502  Army 056 Macemen         122868  2 bytes        +/- 32,767    
+ 503  Army 056 Swordsmen       122870  2 bytes        +/- 32,767    
+ 504  Army 056 Pikemen         122872  2 bytes        +/- 32,767    
+ 505  Army 056 Bowmen          122874  2 bytes        +/- 32,767    
+ 506  Army 056 Knights         122876  2 bytes        +/- 32,767    
+ 507  Army 057 Total # Men     123280  4 bytes     +/- 2,147,483,648
+ 508  Army 057 Peasants        123284  2 bytes        +/- 32,767    
+ 509  Army 057 Cbowmen         123286  2 bytes        +/- 32,767    
+ 510  Army 057 Macemen         123288  2 bytes        +/- 32,767    
+ 511  Army 057 Swordsmen       123290  2 bytes        +/- 32,767    
+ 512  Army 057 Pikemen         123292  2 bytes        +/- 32,767    
+ 513  Army 057 Bowmen          123294  2 bytes        +/- 32,767    
+ 514  Army 057 Knights         123296  2 bytes        +/- 32,767    
+ 515  Army 058 Total # Men     123700  4 bytes     +/- 2,147,483,648
+ 516  Army 058 Peasants        123704  2 bytes        +/- 32,767    
+ 517  Army 058 Cbowmen         123706  2 bytes        +/- 32,767    
+ 518  Army 058 Macemen         123708  2 bytes        +/- 32,767    
+ 519  Army 058 Swordsmen       123710  2 bytes        +/- 32,767    
+ 520  Army 058 Pikemen         123712  2 bytes        +/- 32,767    
+ 521  Army 058 Bowmen          123714  2 bytes        +/- 32,767    
+ 522  Army 058 Knights         123716  2 bytes        +/- 32,767    
+ 523  Army 059 Total # Men     124120  4 bytes     +/- 2,147,483,648
+ 524  Army 059 Peasants        124124  2 bytes        +/- 32,767    
+ 525  Army 059 Cbowmen         124126  2 bytes        +/- 32,767    
+ 526  Army 059 Macemen         124128  2 bytes        +/- 32,767    
+ 527  Army 059 Swordsmen       124130  2 bytes        +/- 32,767    
+ 528  Army 059 Pikemen         124132  2 bytes        +/- 32,767    
+ 529  Army 059 Bowmen          124134  2 bytes        +/- 32,767    
+ 530  Army 059 Knights         124136  2 bytes        +/- 32,767    
+ 531  Army 060 Total # Men     124540  4 bytes     +/- 2,147,483,648
+ 532  Army 060 Peasants        124544  2 bytes        +/- 32,767    
+ 533  Army 060 Cbowmen         124546  2 bytes        +/- 32,767    
+ 534  Army 060 Macemen         124548  2 bytes        +/- 32,767    
+ 535  Army 060 Swordsmen       124550  2 bytes        +/- 32,767    
+ 536  Army 060 Pikemen         124552  2 bytes        +/- 32,767    
+ 537  Army 060 Bowmen          124554  2 bytes        +/- 32,767    
+ 538  Army 060 Knights         124556  2 bytes        +/- 32,767    
+ 539  Army 061 Total # Men     124960  4 bytes     +/- 2,147,483,648
+ 540  Army 061 Peasants        124964  2 bytes        +/- 32,767    
+ 541  Army 061 Cbowmen         124966  2 bytes        +/- 32,767    
+ 542  Army 061 Macemen         124968  2 bytes        +/- 32,767    
+ 543  Army 061 Swordsmen       124970  2 bytes        +/- 32,767    
+ 544  Army 061 Pikemen         124972  2 bytes        +/- 32,767    
+ 545  Army 061 Bowmen          124974  2 bytes        +/- 32,767    
+ 546  Army 061 Knights         124976  2 bytes        +/- 32,767    
+ 547  Army 062 Total # Men     125380  4 bytes     +/- 2,147,483,648
+ 548  Army 062 Peasants        125384  2 bytes        +/- 32,767    
+ 549  Army 062 Cbowmen         125386  2 bytes        +/- 32,767    
+ 550  Army 062 Macemen         125388  2 bytes        +/- 32,767    
+ 551  Army 062 Swordsmen       125390  2 bytes        +/- 32,767    
+ 552  Army 062 Pikemen         125392  2 bytes        +/- 32,767    
+ 553  Army 062 Bowmen          125394  2 bytes        +/- 32,767    
+ 554  Army 062 Knights         125396  2 bytes        +/- 32,767    
+ 555  Army 063 Total # Men     125800  4 bytes     +/- 2,147,483,648
+ 556  Army 063 Peasants        125804  2 bytes        +/- 32,767    
+ 557  Army 063 Cbowmen         125806  2 bytes        +/- 32,767    
+ 558  Army 063 Macemen         125808  2 bytes        +/- 32,767    
+ 559  Army 063 Swordsmen       125810  2 bytes        +/- 32,767    
+ 560  Army 063 Pikemen         125812  2 bytes        +/- 32,767    
+ 561  Army 063 Bowmen          125814  2 bytes        +/- 32,767    
+ 562  Army 063 Knights         125816  2 bytes        +/- 32,767    
+ 563  Army 064 Total # Men     126220  4 bytes     +/- 2,147,483,648
+ 564  Army 064 Peasants        126224  2 bytes        +/- 32,767    
+ 565  Army 064 Cbowmen         126226  2 bytes        +/- 32,767    
+ 566  Army 064 Macemen         126228  2 bytes        +/- 32,767    
+ 567  Army 064 Swordsmen       126230  2 bytes        +/- 32,767    
+ 568  Army 064 Pikemen         126232  2 bytes        +/- 32,767    
+ 569  Army 064 Bowmen          126234  2 bytes        +/- 32,767    
+ 570  Army 064 Knights         126236  2 bytes        +/- 32,767    
+ 571  Army 065 Total # Men     126640  4 bytes     +/- 2,147,483,648
+ 572  Army 065 Peasants        126644  2 bytes        +/- 32,767    
+ 573  Army 065 Cbowmen         126646  2 bytes        +/- 32,767    
+ 574  Army 065 Macemen         126648  2 bytes        +/- 32,767    
+ 575  Army 065 Swordsmen       126650  2 bytes        +/- 32,767    
+ 576  Army 065 Pikemen         126652  2 bytes        +/- 32,767    
+ 577  Army 065 Bowmen          126654  2 bytes        +/- 32,767    
+ 578  Army 065 Knights         126656  2 bytes        +/- 32,767    
+ 579  Army 066 Total # Men     127060  4 bytes     +/- 2,147,483,648
+ 580  Army 066 Peasants        127064  2 bytes        +/- 32,767    
+ 581  Army 066 Cbowmen         127066  2 bytes        +/- 32,767    
+ 582  Army 066 Macemen         127068  2 bytes        +/- 32,767    
+ 583  Army 066 Swordsmen       127070  2 bytes        +/- 32,767    
+ 584  Army 066 Pikemen         127072  2 bytes        +/- 32,767    
+ 585  Army 066 Bowmen          127074  2 bytes        +/- 32,767    
+ 586  Army 066 Knights         127076  2 bytes        +/- 32,767    
+ 587  Army 067 Total # Men     127480  4 bytes     +/- 2,147,483,648
+ 588  Army 067 Peasants        127484  2 bytes        +/- 32,767    
+ 589  Army 067 Cbowmen         127486  2 bytes        +/- 32,767    
+ 590  Army 067 Macemen         127488  2 bytes        +/- 32,767    
+ 591  Army 067 Swordsmen       127490  2 bytes        +/- 32,767    
+ 592  Army 067 Pikemen         127492  2 bytes        +/- 32,767    
+ 593  Army 067 Bowmen          127494  2 bytes        +/- 32,767    
+ 594  Army 067 Knights         127496  2 bytes        +/- 32,767    
+ 595  Army 068 Total # Men     127900  4 bytes     +/- 2,147,483,648
+ 596  Army 068 Peasants        127904  2 bytes        +/- 32,767    
+ 597  Army 068 Cbowmen         127906  2 bytes        +/- 32,767    
+ 598  Army 068 Macemen         127908  2 bytes        +/- 32,767    
+ 599  Army 068 Swordsmen       127910  2 bytes        +/- 32,767    
+ 600  Army 068 Pikemen         127912  2 bytes        +/- 32,767    
+ 601  Army 068 Bowmen          127914  2 bytes        +/- 32,767    
+ 602  Army 068 Knights         127916  2 bytes        +/- 32,767    
+ 603  Army 069 Total # Men     128320  4 bytes     +/- 2,147,483,648
+ 604  Army 069 Peasants        128324  2 bytes        +/- 32,767    
+ 605  Army 069 Cbowmen         128326  2 bytes        +/- 32,767    
+ 606  Army 069 Macemen         128328  2 bytes        +/- 32,767    
+ 607  Army 069 Swordsmen       128330  2 bytes        +/- 32,767    
+ 608  Army 069 Pikemen         128332  2 bytes        +/- 32,767    
+ 609  Army 069 Bowmen          128334  2 bytes        +/- 32,767    
+ 610  Army 069 Knights         128336  2 bytes        +/- 32,767    
+ 611  Army 070 Total # Men     128740  4 bytes     +/- 2,147,483,648
+ 612  Army 070 Peasants        128744  2 bytes        +/- 32,767    
+ 613  Army 070 Cbowmen         128746  2 bytes        +/- 32,767    
+ 614  Army 070 Macemen         128748  2 bytes        +/- 32,767    
+ 615  Army 070 Swordsmen       128750  2 bytes        +/- 32,767    
+ 616  Army 070 Pikemen         128752  2 bytes        +/- 32,767    
+ 617  Army 070 Bowmen          128754  2 bytes        +/- 32,767    
+ 618  Army 070 Knights         128756  2 bytes        +/- 32,767    
+ 619  Army 071 Total # Men     129160  4 bytes     +/- 2,147,483,648
+ 620  Army 071 Peasants        129164  2 bytes        +/- 32,767    
+ 621  Army 071 Cbowmen         129166  2 bytes        +/- 32,767    
+ 622  Army 071 Macemen         129168  2 bytes        +/- 32,767    
+ 623  Army 071 Swordsmen       129170  2 bytes        +/- 32,767    
+ 624  Army 071 Pikemen         129172  2 bytes        +/- 32,767    
+ 625  Army 071 Bowmen          129174  2 bytes        +/- 32,767    
+ 626  Army 071 Knights         129176  2 bytes        +/- 32,767    
+ 627  Army 072 Total # Men     129580  4 bytes     +/- 2,147,483,648
+ 628  Army 072 Peasants        129584  2 bytes        +/- 32,767    
+ 629  Army 072 Cbowmen         129586  2 bytes        +/- 32,767    
+ 630  Army 072 Macemen         129588  2 bytes        +/- 32,767    
+ 631  Army 072 Swordsmen       129590  2 bytes        +/- 32,767    
+ 632  Army 072 Pikemen         129592  2 bytes        +/- 32,767    
+ 633  Army 072 Bowmen          129594  2 bytes        +/- 32,767    
+ 634  Army 072 Knights         129596  2 bytes        +/- 32,767    
+ 635  Army 073 Total # Men     130000  4 bytes     +/- 2,147,483,648
+ 636  Army 073 Peasants        130004  2 bytes        +/- 32,767    
+ 637  Army 073 Cbowmen         130006  2 bytes        +/- 32,767    
+ 638  Army 073 Macemen         130008  2 bytes        +/- 32,767    
+ 639  Army 073 Swordsmen       130010  2 bytes        +/- 32,767    
+ 640  Army 073 Pikemen         130012  2 bytes        +/- 32,767    
+ 641  Army 073 Bowmen          130014  2 bytes        +/- 32,767    
+ 642  Army 073 Knights         130016  2 bytes        +/- 32,767    
+ 643  Army 074 Total # Men     130420  4 bytes     +/- 2,147,483,648
+ 644  Army 074 Peasants        130424  2 bytes        +/- 32,767    
+ 645  Army 074 Cbowmen         130426  2 bytes        +/- 32,767    
+ 646  Army 074 Macemen         130428  2 bytes        +/- 32,767    
+ 647  Army 074 Swordsmen       130430  2 bytes        +/- 32,767    
+ 648  Army 074 Pikemen         130432  2 bytes        +/- 32,767    
+ 649  Army 074 Bowmen          130434  2 bytes        +/- 32,767    
+ 650  Army 074 Knights         130436  2 bytes        +/- 32,767    
+ 651  Army 075 Total # Men     130840  4 bytes     +/- 2,147,483,648
+ 652  Army 075 Peasants        130844  2 bytes        +/- 32,767    
+ 653  Army 075 Cbowmen         130846  2 bytes        +/- 32,767    
+ 654  Army 075 Macemen         130848  2 bytes        +/- 32,767    
+ 655  Army 075 Swordsmen       130850  2 bytes        +/- 32,767    
+ 656  Army 075 Pikemen         130852  2 bytes        +/- 32,767    
+ 657  Army 075 Bowmen          130854  2 bytes        +/- 32,767    
+ 658  Army 075 Knights         130856  2 bytes        +/- 32,767    
+ 659  Army 076 Total # Men     131260  4 bytes     +/- 2,147,483,648
+ 660  Army 076 Peasants        131264  2 bytes        +/- 32,767    
+ 661  Army 076 Cbowmen         131266  2 bytes        +/- 32,767    
+ 662  Army 076 Macemen         131268  2 bytes        +/- 32,767    
+ 663  Army 076 Swordsmen       131270  2 bytes        +/- 32,767    
+ 664  Army 076 Pikemen         131272  2 bytes        +/- 32,767    
+ 665  Army 076 Bowmen          131274  2 bytes        +/- 32,767    
+ 666  Army 076 Knights         131276  2 bytes        +/- 32,767    
+ 667  Army 077 Total # Men     131680  4 bytes     +/- 2,147,483,648
+ 668  Army 077 Peasants        131684  2 bytes        +/- 32,767    
+ 669  Army 077 Cbowmen         131686  2 bytes        +/- 32,767    
+ 670  Army 077 Macemen         131688  2 bytes        +/- 32,767    
+ 671  Army 077 Swordsmen       131690  2 bytes        +/- 32,767    
+ 672  Army 077 Pikemen         131692  2 bytes        +/- 32,767    
+ 673  Army 077 Bowmen          131694  2 bytes        +/- 32,767    
+ 674  Army 077 Knights         131696  2 bytes        +/- 32,767    
+ 675  Army 078 Total # Men     132100  4 bytes     +/- 2,147,483,648
+ 676  Army 078 Peasants        132104  2 bytes        +/- 32,767    
+ 677  Army 078 Cbowmen         132106  2 bytes        +/- 32,767    
+ 678  Army 078 Macemen         132108  2 bytes        +/- 32,767    
+ 679  Army 078 Swordsmen       132110  2 bytes        +/- 32,767    
+ 680  Army 078 Pikemen         132112  2 bytes        +/- 32,767    
+ 681  Army 078 Bowmen          132114  2 bytes        +/- 32,767    
+ 682  Army 078 Knights         132116  2 bytes        +/- 32,767    
+ 683  Army 079 Total # Men     132520  4 bytes     +/- 2,147,483,648
+ 684  Army 079 Peasants        132524  2 bytes        +/- 32,767    
+ 685  Army 079 Cbowmen         132526  2 bytes        +/- 32,767    
+ 686  Army 079 Macemen         132528  2 bytes        +/- 32,767    
+ 687  Army 079 Swordsmen       132530  2 bytes        +/- 32,767    
+ 688  Army 079 Pikemen         132532  2 bytes        +/- 32,767    
+ 689  Army 079 Bowmen          132534  2 bytes        +/- 32,767    
+ 690  Army 079 Knights         132536  2 bytes        +/- 32,767    
+ 691  Army 080 Total # Men     132940  4 bytes     +/- 2,147,483,648
+ 692  Army 080 Peasants        132944  2 bytes        +/- 32,767    
+ 693  Army 080 Cbowmen         132946  2 bytes        +/- 32,767    
+ 694  Army 080 Macemen         132948  2 bytes        +/- 32,767    
+ 695  Army 080 Swordsmen       132950  2 bytes        +/- 32,767    
+ 696  Army 080 Pikemen         132952  2 bytes        +/- 32,767    
+ 697  Army 080 Bowmen          132954  2 bytes        +/- 32,767    
+ 698  Army 080 Knights         132956  2 bytes        +/- 32,767    
+ 699  Army 081 Total # Men     133360  4 bytes     +/- 2,147,483,648
+ 700  Army 081 Peasants        133364  2 bytes        +/- 32,767    
+ 701  Army 081 Cbowmen         133366  2 bytes        +/- 32,767    
+ 702  Army 081 Macemen         133368  2 bytes        +/- 32,767    
+ 703  Army 081 Swordsmen       133370  2 bytes        +/- 32,767    
+ 704  Army 081 Pikemen         133372  2 bytes        +/- 32,767    
+ 705  Army 081 Bowmen          133374  2 bytes        +/- 32,767    
+ 706  Army 081 Knights         133376  2 bytes        +/- 32,767    
+ 707  Army 082 Total # Men     133780  4 bytes     +/- 2,147,483,648
+ 708  Army 082 Peasants        133784  2 bytes        +/- 32,767    
+ 709  Army 082 Cbowmen         133786  2 bytes        +/- 32,767    
+ 710  Army 082 Macemen         133788  2 bytes        +/- 32,767    
+ 711  Army 082 Swordsmen       133790  2 bytes        +/- 32,767    
+ 712  Army 082 Pikemen         133792  2 bytes        +/- 32,767    
+ 713  Army 082 Bowmen          133794  2 bytes        +/- 32,767    
+ 714  Army 082 Knights         133796  2 bytes        +/- 32,767    
+ 715  Army 083 Total # Men     134200  4 bytes     +/- 2,147,483,648
+ 716  Army 083 Peasants        134204  2 bytes        +/- 32,767    
+ 717  Army 083 Cbowmen         134206  2 bytes        +/- 32,767    
+ 718  Army 083 Macemen         134208  2 bytes        +/- 32,767    
+ 719  Army 083 Swordsmen       134210  2 bytes        +/- 32,767    
+ 720  Army 083 Pikemen         134212  2 bytes        +/- 32,767    
+ 721  Army 083 Bowmen          134214  2 bytes        +/- 32,767    
+ 722  Army 083 Knights         134216  2 bytes        +/- 32,767    
+ 723  Army 084 Total # Men     134620  4 bytes     +/- 2,147,483,648
+ 724  Army 084 Peasants        134624  2 bytes        +/- 32,767    
+ 725  Army 084 Cbowmen         134626  2 bytes        +/- 32,767    
+ 726  Army 084 Macemen         134628  2 bytes        +/- 32,767    
+ 727  Army 084 Swordsmen       134630  2 bytes        +/- 32,767    
+ 728  Army 084 Pikemen         134632  2 bytes        +/- 32,767    
+ 729  Army 084 Bowmen          134634  2 bytes        +/- 32,767    
+ 730  Army 084 Knights         134636  2 bytes        +/- 32,767    
+ 731  Army 085 Total # Men     135040  4 bytes     +/- 2,147,483,648
+ 732  Army 085 Peasants        135044  2 bytes        +/- 32,767    
+ 733  Army 085 Cbowmen         135046  2 bytes        +/- 32,767    
+ 734  Army 085 Macemen         135048  2 bytes        +/- 32,767    
+ 735  Army 085 Swordsmen       135050  2 bytes        +/- 32,767    
+ 736  Army 085 Pikemen         135052  2 bytes        +/- 32,767    
+ 737  Army 085 Bowmen          135054  2 bytes        +/- 32,767    
+ 738  Army 085 Knights         135056  2 bytes        +/- 32,767    
+ 739  Army 086 Total # Men     135460  4 bytes     +/- 2,147,483,648
+ 740  Army 086 Peasants        135464  2 bytes        +/- 32,767    
+ 741  Army 086 Cbowmen         135466  2 bytes        +/- 32,767    
+ 742  Army 086 Macemen         135468  2 bytes        +/- 32,767    
+ 743  Army 086 Swordsmen       135470  2 bytes        +/- 32,767    
+ 744  Army 086 Pikemen         135472  2 bytes        +/- 32,767    
+ 745  Army 086 Bowmen          135474  2 bytes        +/- 32,767    
+ 746  Army 086 Knights         135476  2 bytes        +/- 32,767    
+ 747  Army 087 Total # Men     135880  4 bytes     +/- 2,147,483,648
+ 748  Army 087 Peasants        135884  2 bytes        +/- 32,767    
+ 749  Army 087 Cbowmen         135886  2 bytes        +/- 32,767    
+ 750  Army 087 Macemen         135888  2 bytes        +/- 32,767    
+ 751  Army 087 Swordsmen       135890  2 bytes        +/- 32,767    
+ 752  Army 087 Pikemen         135892  2 bytes        +/- 32,767    
+ 753  Army 087 Bowmen          135894  2 bytes        +/- 32,767    
+ 754  Army 087 Knights         135896  2 bytes        +/- 32,767    
+ 755  Army 088 Total # Men     136300  4 bytes     +/- 2,147,483,648
+ 756  Army 088 Peasants        136304  2 bytes        +/- 32,767    
+ 757  Army 088 Cbowmen         136306  2 bytes        +/- 32,767    
+ 758  Army 088 Macemen         136308  2 bytes        +/- 32,767    
+ 759  Army 088 Swordsmen       136310  2 bytes        +/- 32,767    
+ 760  Army 088 Pikemen         136312  2 bytes        +/- 32,767    
+ 761  Army 088 Bowmen          136314  2 bytes        +/- 32,767    
+ 762  Army 088 Knights         136316  2 bytes        +/- 32,767    
+ 763  Army 089 Total # Men     136720  4 bytes     +/- 2,147,483,648
+ 764  Army 089 Peasants        136724  2 bytes        +/- 32,767    
+ 765  Army 089 Cbowmen         136726  2 bytes        +/- 32,767    
+ 766  Army 089 Macemen         136728  2 bytes        +/- 32,767    
+ 767  Army 089 Swordsmen       136730  2 bytes        +/- 32,767    
+ 768  Army 089 Pikemen         136732  2 bytes        +/- 32,767    
+ 769  Army 089 Bowmen          136734  2 bytes        +/- 32,767    
+ 770  Army 089 Knights         136736  2 bytes        +/- 32,767    
+ 771  Army 090 Total # Men     137140  4 bytes     +/- 2,147,483,648
+ 772  Army 090 Peasants        137144  2 bytes        +/- 32,767    
+ 773  Army 090 Cbowmen         137146  2 bytes        +/- 32,767    
+ 774  Army 090 Macemen         137148  2 bytes        +/- 32,767    
+ 775  Army 090 Swordsmen       137150  2 bytes        +/- 32,767    
+ 776  Army 090 Pikemen         137152  2 bytes        +/- 32,767    
+ 777  Army 090 Bowmen          137154  2 bytes        +/- 32,767    
+ 778  Army 090 Knights         137156  2 bytes        +/- 32,767    
+ 779  Army 091 Total # Men     137560  4 bytes     +/- 2,147,483,648
+ 780  Army 091 Peasants        137564  2 bytes        +/- 32,767    
+ 781  Army 091 Cbowmen         137566  2 bytes        +/- 32,767    
+ 782  Army 091 Macemen         137568  2 bytes        +/- 32,767    
+ 783  Army 091 Swordsmen       137570  2 bytes        +/- 32,767    
+ 784  Army 091 Pikemen         137572  2 bytes        +/- 32,767    
+ 785  Army 091 Bowmen          137574  2 bytes        +/- 32,767    
+ 786  Army 091 Knights         137576  2 bytes        +/- 32,767    
+ 787  Army 092 Total # Men     137980  4 bytes     +/- 2,147,483,648
+ 788  Army 092 Peasants        137984  2 bytes        +/- 32,767    
+ 789  Army 092 Cbowmen         137986  2 bytes        +/- 32,767    
+ 790  Army 092 Macemen         137988  2 bytes        +/- 32,767    
+ 791  Army 092 Swordsmen       137990  2 bytes        +/- 32,767    
+ 792  Army 092 Pikemen         137992  2 bytes        +/- 32,767    
+ 793  Army 092 Bowmen          137994  2 bytes        +/- 32,767    
+ 794  Army 092 Knights         137996  2 bytes        +/- 32,767    
+ 795  Army 093 Total # Men     138400  4 bytes     +/- 2,147,483,648
+ 796  Army 093 Peasants        138404  2 bytes        +/- 32,767    
+ 797  Army 093 Cbowmen         138406  2 bytes        +/- 32,767    
+ 798  Army 093 Macemen         138408  2 bytes        +/- 32,767    
+ 799  Army 093 Swordsmen       138410  2 bytes        +/- 32,767    
+ 800  Army 093 Pikemen         138412  2 bytes        +/- 32,767    
+ 801  Army 093 Bowmen          138414  2 bytes        +/- 32,767    
+ 802  Army 093 Knights         138416  2 bytes        +/- 32,767    
+ 803  Army 094 Total # Men     138820  4 bytes     +/- 2,147,483,648
+ 804  Army 094 Peasants        138824  2 bytes        +/- 32,767    
+ 805  Army 094 Cbowmen         138826  2 bytes        +/- 32,767    
+ 806  Army 094 Macemen         138828  2 bytes        +/- 32,767    
+ 807  Army 094 Swordsmen       138830  2 bytes        +/- 32,767    
+ 808  Army 094 Pikemen         138832  2 bytes        +/- 32,767    
+ 809  Army 094 Bowmen          138834  2 bytes        +/- 32,767    
+ 810  Army 094 Knights         138836  2 bytes        +/- 32,767    
+ 811  Army 095 Total # Men     139240  4 bytes     +/- 2,147,483,648
+ 812  Army 095 Peasants        139244  2 bytes        +/- 32,767    
+ 813  Army 095 Cbowmen         139246  2 bytes        +/- 32,767    
+ 814  Army 095 Macemen         139248  2 bytes        +/- 32,767    
+ 815  Army 095 Swordsmen       139250  2 bytes        +/- 32,767    
+ 816  Army 095 Pikemen         139252  2 bytes        +/- 32,767    
+ 817  Army 095 Bowmen          139254  2 bytes        +/- 32,767    
+ 818  Army 095 Knights         139256  2 bytes        +/- 32,767    
+ 819  Army 096 Total # Men     139660  4 bytes     +/- 2,147,483,648
+ 820  Army 096 Peasants        139664  2 bytes        +/- 32,767    
+ 821  Army 096 Cbowmen         139666  2 bytes        +/- 32,767    
+ 822  Army 096 Macemen         139668  2 bytes        +/- 32,767    
+ 823  Army 096 Swordsmen       139670  2 bytes        +/- 32,767    
+ 824  Army 096 Pikemen         139672  2 bytes        +/- 32,767    
+ 825  Army 096 Bowmen          139674  2 bytes        +/- 32,767    
+ 826  Army 096 Knights         139676  2 bytes        +/- 32,767    
+ 827  Army 097 Total # Men     140080  4 bytes     +/- 2,147,483,648
+ 828  Army 097 Peasants        140084  2 bytes        +/- 32,767    
+ 829  Army 097 Cbowmen         140086  2 bytes        +/- 32,767    
+ 830  Army 097 Macemen         140088  2 bytes        +/- 32,767    
+ 831  Army 097 Swordsmen       140090  2 bytes        +/- 32,767    
+ 832  Army 097 Pikemen         140092  2 bytes        +/- 32,767    
+ 833  Army 097 Bowmen          140094  2 bytes        +/- 32,767    
+ 834  Army 097 Knights         140096  2 bytes        +/- 32,767    
+ 835  Army 098 Total # Men     140500  4 bytes     +/- 2,147,483,648
+ 836  Army 098 Peasants        140504  2 bytes        +/- 32,767    
+ 837  Army 098 Cbowmen         140506  2 bytes        +/- 32,767    
+ 838  Army 098 Macemen         140508  2 bytes        +/- 32,767    
+ 839  Army 098 Swordsmen       140510  2 bytes        +/- 32,767    
+ 840  Army 098 Pikemen         140512  2 bytes        +/- 32,767    
+ 841  Army 098 Bowmen          140514  2 bytes        +/- 32,767    
+ 842  Army 098 Knights         140516  2 bytes        +/- 32,767    
+ 843  Army 099 Total # Men     140920  4 bytes     +/- 2,147,483,648
+ 844  Army 099 Peasants        140924  2 bytes        +/- 32,767    
+ 845  Army 099 Cbowmen         140926  2 bytes        +/- 32,767    
+ 846  Army 099 Macemen         140928  2 bytes        +/- 32,767    
+ 847  Army 099 Swordsmen       140930  2 bytes        +/- 32,767    
+ 848  Army 099 Pikemen         140932  2 bytes        +/- 32,767    
+ 849  Army 099 Bowmen          140934  2 bytes        +/- 32,767    
+ 850  Army 099 Knights         140936  2 bytes        +/- 32,767    
+ 851  Army 100 Total # Men     141340  4 bytes     +/- 2,147,483,648
+ 852  Army 100 Peasants        141344  2 bytes        +/- 32,767    
+ 853  Army 100 Cbowmen         141346  2 bytes        +/- 32,767    
+ 854  Army 100 Macemen         141348  2 bytes        +/- 32,767    
+ 855  Army 100 Swordsmen       141350  2 bytes        +/- 32,767    
+ 856  Army 100 Pikemen         141352  2 bytes        +/- 32,767    
+ 857  Army 100 Bowmen          141354  2 bytes        +/- 32,767    
+ 858  Army 100 Knights         141356  2 bytes        +/- 32,767    
+ 859  Army 101 Total # Men     141760  4 bytes     +/- 2,147,483,648
+ 860  Army 101 Peasants        141764  2 bytes        +/- 32,767    
+ 861  Army 101 Cbowmen         141766  2 bytes        +/- 32,767    
+ 862  Army 101 Macemen         141768  2 bytes        +/- 32,767    
+ 863  Army 101 Swordsmen       141770  2 bytes        +/- 32,767    
+ 864  Army 101 Pikemen         141772  2 bytes        +/- 32,767    
+ 865  Army 101 Bowmen          141774  2 bytes        +/- 32,767    
+ 866  Army 101 Knights         141776  2 bytes        +/- 32,767    
+ 867  Army 102 Total # Men     142180  4 bytes     +/- 2,147,483,648
+ 868  Army 102 Peasants        142184  2 bytes        +/- 32,767    
+ 869  Army 102 Cbowmen         142186  2 bytes        +/- 32,767    
+ 870  Army 102 Macemen         142188  2 bytes        +/- 32,767    
+ 871  Army 102 Swordsmen       142190  2 bytes        +/- 32,767    
+ 872  Army 102 Pikemen         142192  2 bytes        +/- 32,767    
+ 873  Army 102 Bowmen          142194  2 bytes        +/- 32,767    
+ 874  Army 102 Knights         142196  2 bytes        +/- 32,767    
+ 875  Army 103 Total # Men     142600  4 bytes     +/- 2,147,483,648
+ 876  Army 103 Peasants        142604  2 bytes        +/- 32,767    
+ 877  Army 103 Cbowmen         142606  2 bytes        +/- 32,767    
+ 878  Army 103 Macemen         142608  2 bytes        +/- 32,767    
+ 879  Army 103 Swordsmen       142610  2 bytes        +/- 32,767    
+ 880  Army 103 Pikemen         142612  2 bytes        +/- 32,767    
+ 881  Army 103 Bowmen          142614  2 bytes        +/- 32,767    
+ 882  Army 103 Knights         142616  2 bytes        +/- 32,767    
+ 883  Army 104 Total # Men     143020  4 bytes     +/- 2,147,483,648
+ 884  Army 104 Peasants        143024  2 bytes        +/- 32,767    
+ 885  Army 104 Cbowmen         143026  2 bytes        +/- 32,767    
+ 886  Army 104 Macemen         143028  2 bytes        +/- 32,767    
+ 887  Army 104 Swordsmen       143030  2 bytes        +/- 32,767    
+ 888  Army 104 Pikemen         143032  2 bytes        +/- 32,767    
+ 889  Army 104 Bowmen          143034  2 bytes        +/- 32,767    
+ 890  Army 104 Knights         143036  2 bytes        +/- 32,767    
+ 891  Army 105 Total # Men     143440  4 bytes     +/- 2,147,483,648
+ 892  Army 105 Peasants        143444  2 bytes        +/- 32,767    
+ 893  Army 105 Cbowmen         143446  2 bytes        +/- 32,767    
+ 894  Army 105 Macemen         143448  2 bytes        +/- 32,767    
+ 895  Army 105 Swordsmen       143450  2 bytes        +/- 32,767    
+ 896  Army 105 Pikemen         143452  2 bytes        +/- 32,767    
+ 897  Army 105 Bowmen          143454  2 bytes        +/- 32,767    
+ 898  Army 105 Knights         143456  2 bytes        +/- 32,767    
+ 899  Army 106 Total # Men     143860  4 bytes     +/- 2,147,483,648
+ 900  Army 106 Peasants        143864  2 bytes        +/- 32,767    
+ 901  Army 106 Cbowmen         143866  2 bytes        +/- 32,767    
+ 902  Army 106 Macemen         143868  2 bytes        +/- 32,767    
+ 903  Army 106 Swordsmen       143870  2 bytes        +/- 32,767    
+ 904  Army 106 Pikemen         143872  2 bytes        +/- 32,767    
+ 905  Army 106 Bowmen          143874  2 bytes        +/- 32,767    
+ 906  Army 106 Knights         143876  2 bytes        +/- 32,767    
+ 907  Army 107 Total # Men     144280  4 bytes     +/- 2,147,483,648
+ 908  Army 107 Peasants        144284  2 bytes        +/- 32,767    
+ 909  Army 107 Cbowmen         144286  2 bytes        +/- 32,767    
+ 910  Army 107 Macemen         144288  2 bytes        +/- 32,767    
+ 911  Army 107 Swordsmen       144290  2 bytes        +/- 32,767    
+ 912  Army 107 Pikemen         144292  2 bytes        +/- 32,767    
+ 913  Army 107 Bowmen          144294  2 bytes        +/- 32,767    
+ 914  Army 107 Knights         144296  2 bytes        +/- 32,767    
+ 915  Army 108 Total # Men     144700  4 bytes     +/- 2,147,483,648
+ 916  Army 108 Peasants        144704  2 bytes        +/- 32,767    
+ 917  Army 108 Cbowmen         144706  2 bytes        +/- 32,767    
+ 918  Army 108 Macemen         144708  2 bytes        +/- 32,767    
+ 919  Army 108 Swordsmen       144710  2 bytes        +/- 32,767    
+ 920  Army 108 Pikemen         144712  2 bytes        +/- 32,767    
+ 921  Army 108 Bowmen          144714  2 bytes        +/- 32,767    
+ 922  Army 108 Knights         144716  2 bytes        +/- 32,767    
+ 923  Army 109 Total # Men     145120  4 bytes     +/- 2,147,483,648
+ 924  Army 109 Peasants        145124  2 bytes        +/- 32,767    
+ 925  Army 109 Cbowmen         145126  2 bytes        +/- 32,767    
+ 926  Army 109 Macemen         145128  2 bytes        +/- 32,767    
+ 927  Army 109 Swordsmen       145130  2 bytes        +/- 32,767    
+ 928  Army 109 Pikemen         145132  2 bytes        +/- 32,767    
+ 929  Army 109 Bowmen          145134  2 bytes        +/- 32,767    
+ 930  Army 109 Knights         145136  2 bytes        +/- 32,767    
+ 931  Army 110 Total # Men     145540  4 bytes     +/- 2,147,483,648
+ 932  Army 110 Peasants        145544  2 bytes        +/- 32,767    
+ 933  Army 110 Cbowmen         145546  2 bytes        +/- 32,767    
+ 934  Army 110 Macemen         145548  2 bytes        +/- 32,767    
+ 935  Army 110 Swordsmen       145550  2 bytes        +/- 32,767    
+ 936  Army 110 Pikemen         145552  2 bytes        +/- 32,767    
+ 937  Army 110 Bowmen          145554  2 bytes        +/- 32,767    
+ 938  Army 110 Knights         145556  2 bytes        +/- 32,767    
+ 939  Army 111 Total # Men     145960  4 bytes     +/- 2,147,483,648
+ 940  Army 111 Peasants        145964  2 bytes        +/- 32,767    
+ 941  Army 111 Cbowmen         145966  2 bytes        +/- 32,767    
+ 942  Army 111 Macemen         145968  2 bytes        +/- 32,767    
+ 943  Army 111 Swordsmen       145970  2 bytes        +/- 32,767    
+ 944  Army 111 Pikemen         145972  2 bytes        +/- 32,767    
+ 945  Army 111 Bowmen          145974  2 bytes        +/- 32,767    
+ 946  Army 111 Knights         145976  2 bytes        +/- 32,767    
+ 947  Army 112 Total # Men     146380  4 bytes     +/- 2,147,483,648
+ 948  Army 112 Peasants        146384  2 bytes        +/- 32,767    
+ 949  Army 112 Cbowmen         146386  2 bytes        +/- 32,767    
+ 950  Army 112 Macemen         146388  2 bytes        +/- 32,767    
+ 951  Army 112 Swordsmen       146390  2 bytes        +/- 32,767    
+ 952  Army 112 Pikemen         146392  2 bytes        +/- 32,767    
+ 953  Army 112 Bowmen          146394  2 bytes        +/- 32,767    
+ 954  Army 112 Knights         146396  2 bytes        +/- 32,767    
+ 955  Army 113 Total # Men     146800  4 bytes     +/- 2,147,483,648
+ 956  Army 113 Peasants        146804  2 bytes        +/- 32,767    
+ 957  Army 113 Cbowmen         146806  2 bytes        +/- 32,767    
+ 958  Army 113 Macemen         146808  2 bytes        +/- 32,767    
+ 959  Army 113 Swordsmen       146810  2 bytes        +/- 32,767    
+ 960  Army 113 Pikemen         146812  2 bytes        +/- 32,767    
+ 961  Army 113 Bowmen          146814  2 bytes        +/- 32,767    
+ 962  Army 113 Knights         146816  2 bytes        +/- 32,767    
+ 963  Army 114 Total # Men     147220  4 bytes     +/- 2,147,483,648
+ 964  Army 114 Peasants        147224  2 bytes        +/- 32,767    
+ 965  Army 114 Cbowmen         147226  2 bytes        +/- 32,767    
+ 966  Army 114 Macemen         147228  2 bytes        +/- 32,767    
+ 967  Army 114 Swordsmen       147230  2 bytes        +/- 32,767    
+ 968  Army 114 Pikemen         147232  2 bytes        +/- 32,767    
+ 969  Army 114 Bowmen          147234  2 bytes        +/- 32,767    
+ 970  Army 114 Knights         147236  2 bytes        +/- 32,767    
+ 971  Army 115 Total # Men     147640  4 bytes     +/- 2,147,483,648
+ 972  Army 115 Peasants        147644  2 bytes        +/- 32,767    
+ 973  Army 115 Cbowmen         147646  2 bytes        +/- 32,767    
+ 974  Army 115 Macemen         147648  2 bytes        +/- 32,767    
+ 975  Army 115 Swordsmen       147650  2 bytes        +/- 32,767    
+ 976  Army 115 Pikemen         147652  2 bytes        +/- 32,767    
+ 977  Army 115 Bowmen          147654  2 bytes        +/- 32,767    
+ 978  Army 115 Knights         147656  2 bytes        +/- 32,767    

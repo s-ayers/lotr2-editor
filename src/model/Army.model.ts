@@ -6,7 +6,8 @@ const o = {
     SWORD: 10,
     PIKE: 12,
     BOW: 14,
-    KNIGHT: 16
+    KNIGHT: 16,
+    HAS_MOVED: 0
 }
 
 export class Army {
@@ -19,6 +20,7 @@ export class Army {
     pike: number;
     bow: number;
     knight: number;
+    has_moved: number;
 
     constructor(buf: Buffer, offset: number) {
 
