@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "ng build  --prod --outputPath=docs --deleteOutputPath=true --baseHref=/lotr2-editor --deployUrl=/lotr2-editor"
+    "deploy": "ng build  --prod --outputPath=docs --deleteOutputPath=true --baseHref=/lotr2-editor/ --deployUrl=/lotr2-editor/"
   },
   "private": true,
   "dependencies": {
