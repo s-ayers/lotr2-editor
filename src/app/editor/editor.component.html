@@ -1,26 +1,35 @@
+<ngb-tabset orientation="horizontal">
 
-    <ngb-tabset orientation="horizontal">
-        <ngb-tab title="Armory">
-            <ng-template ngbTabContent>
-  <app-armory [armory]="game.armory"></app-armory>
+    <ngb-tab title="Inventory">
+        <ng-template ngbTabContent>
+            <app-inventory [inventory]="game.inventory"></app-inventory>
 
-            </ng-template>
-        </ngb-tab>
-        <ngb-tab title="Shires">
-            <ng-template ngbTabContent>
+        </ng-template>
+    </ngb-tab>
+    
+    <ngb-tab title="Armory">
+        <ng-template ngbTabContent>
+            <app-armory [armory]="game.armory"></app-armory>
+
+        </ng-template>
+    </ngb-tab>
 
 
-            </ng-template>
-        </ngb-tab>
+    <ngb-tab title="Shires">
+        <ng-template ngbTabContent>
 
-        <ngb-tab title="Armies">
-            <ng-template ngbTabContent>
-            
-            
-            </ng-template>
-        </ngb-tab>
 
-    </ngb-tabset>
+        </ng-template>
+    </ngb-tab>
+
+    <ngb-tab title="Armies">
+        <ng-template ngbTabContent>
+
+
+        </ng-template>
+    </ngb-tab>
+
+</ngb-tabset>
 
 
 <hr>

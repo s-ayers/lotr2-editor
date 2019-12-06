@@ -2,21 +2,16 @@
 import { Armory} from './Armory.model';
 import {Shire} from './Shire.model';
 import {Army} from './Army.model';
+import { Inventory } from './Inventory.model';
 
 
 
 export module Game {
     export function Parse(buf: Buffer): any {
         var myGame = {}
-        myGame['gold'] = buf.readInt32LE(84864);
-        // console.log('Gold: ' + buf.readInt32LE(84864));
-        myGame['iron'] = buf.readInt32LE(84872);
-        // console.log('Iron: ' + buf.readInt32LE(84872));
-        myGame['wood'] = buf.readInt32LE(84888);
-        // console.log('Wood: ' + buf.readInt32LE(84888));
-        myGame['stone'] = buf.readInt32LE(84880);
-        // console.log('Stone: ' + buf.readInt32LE(84880));
+
         
+        myGame['inventory'] = new Inventory(buf);
         myGame['armory'] = new Armory(buf);
         
         myGame['shires'] = [];
@@ -53,6 +48,15 @@ export module Game {
     
         
         return myGame;
+    }
+
+    export function Compose(buf: Buffer, Game: any) {
+console.log(Game);
+
+    Game.inventory.Compose(buf);
+    Game.armory.Compose(buf);
+
+        return buf;
     }
 }
 

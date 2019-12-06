@@ -22,32 +22,17 @@ export class FileDropComponent {
 
         fileEntry.file((file: File) => {
           this.hasData.emit(file);
-          // Here you can access the real file
-          // console.log(droppedFile.relativePath, file);
-          // let reader = new FileReader();
-          // reader.readAsArrayBuffer(file);
-          // reader.onload = () => {
-          //   const fileData = reader.result;
-          //   console.log(fileData);
-          //   this.file = fileData;
-            
-          // };
 
         });
-      } else {
-        // It was a directory (empty directories are added, otherwise only files)
-        const fileEntry = droppedFile.fileEntry as FileSystemDirectoryEntry;
-        console.log(droppedFile.relativePath, fileEntry);
-      }
+      } 
+
     }
   }
 
   public fileOver(event) {
-    console.log(event);
   }
 
   public fileLeave(event) {
-    console.log(event);
   }
 
 }
