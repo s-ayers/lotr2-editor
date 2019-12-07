@@ -1,39 +1,146 @@
-var readline = require('readline');
-var rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout,
-  terminal: false
-});
+#!/usr/bin/env node
 
-rl.on('line', function(line){
-    var items = line.split(/\s+/),
-        file_location = '';
+const fs = require('fs');
+const yargs = require("yargs");
+var printf = require('printf');
 
-    var offset = parseInt(items[0], 10);
-    if (offset < 84864 ) {
-        file_location = 'Unknown - header';
-    } else if (offset < 84892) {
-        file_location = 'Inventory';
-        if (offset === 84864) {
-            file_location = 'Crowns'
-            items[1] = '$' + parseInt(items[1], 16);
-            items[2] = '$' + parseInt(items[2], 16);
-        }
-    } else if (offset < 84928 ) {
-        file_location = 'Armory';
-    } else if (offset < 99760) {
-        var shire = 16 - Math.floor((99760-offset)/768);
-        file_location = 'Shire ' +  shire;
+const options = yargs
+  .usage("Usage: stragey <file1> <file2>")
+  .option("d", { alias: "diff", describe: "diff the two files (default)", type: "boolean" })
+  .option("j", { alias: "join", describe: "join the two files; show where same", type: "boolean" })
+  .argv;
 
-    } else if (offset < 147658) {
+console.log(options);
 
-        var army = 115 - Math.floor((147658-offset)/420);
+if (options._.length > 2) {
+  throw Error('Too many parameters');
+} else if (options._.length < 2) {
+  throw Error('Too few parameters');
+}
 
-        file_location = 'Army ' + army;
+var buf1, buf2;
 
-    } else {
-        file_location = 'Unknown - footer';
+
+
+readFiles = () => {
+
+  var count = 2;
+  function readCallback() {
+    count -= 1;
+
+    if (count === 0) {
+
+      bufferisValid(buf1);
+      bufferisValid(buf2);
+
+      if (options.j) {
+        joinBuffers(buf1, buf2);
+      } else {
+        diffBuffers(buf1, buf2);
+      }
+
     }
-    
-    console.log(`${items[0]} ${file_location} ${items[1]} ${items[2]}`);
-})
+  }
+
+  fs.readFile(options._[0], (error, content) => {
+    if (error) throw error;
+
+    buf1 = content;
+    readCallback();
+  });
+
+  fs.readFile(options._[1], (error, content) => {
+    if (error) throw error;
+
+    buf2 = content;
+    readCallback();
+  });
+}
+
+joinBuffers = (buf1, buf2) => {
+  for (var i = 0; i < buf1.length; i += 1) {
+    var val1 = buf1.readUInt8(i),
+      val2 = buf2.readUInt8(i);
+
+    if (val1 === val2) {
+      var location = byteLocation(i);
+      var msg = printf('%08d \t %03d \t %03d \t %s\n', i, val1, val2, location);
+      process.stdout.write(msg);
+    }
+  }
+}
+
+diffBuffers = (buf1, buf2) => {
+
+
+  for (var i = 0; i < buf1.length; i += 1) {
+    var val1 = buf1.readUInt8(i),
+      val2 = buf2.readUInt8(i);
+
+    if (val1 !== val2) {
+      var location = byteLocation(i);
+      var msg = printf('%08d \t %03d \t %03d \t %s\n', i, val1, val2, location);
+      process.stdout.write(msg);
+    }
+  }
+}
+
+bufferisValid = (buf) => {
+  if (buf.length !== 471828) {
+    throw Error("File (buffer) is the wrong fix");
+  }
+}
+
+
+byteLocation = (offset) => {
+
+  var location = "Unkown:Unkown";
+
+  if (offset < 84864) {
+    location = headerLocation(offset);
+  } else if (offset < 84892) {
+    location = inventoryLocation(offset);
+  } else if (offset < 84928) {
+    location = armyLocation(offset);
+  } else if (offset < 99760) {
+    location = countyLocation(offset);
+  } else if (offset < 147658) {
+    location = armyLocation(offset);
+  } else {
+    location = footLocation(offset);
+  }
+
+  return location;
+}
+
+
+headerLocation = (offset) => {
+  return 'Header:Unknown';
+}
+
+inventoryLocation = (offset) => {
+  return 'Inventory';
+}
+
+armoryLocation = (offset) => {
+  return 'Armory';
+}
+
+countyLocation = (offset) => {
+  var shire = 16 - Math.floor((99760 - offset) / 768);
+  location = printf('County:%02d', shire);
+
+  return location;
+}
+
+armyLocation = (offset) => {
+  var army = 115 - Math.floor((147658 - offset) / 420);
+
+  return printf('Army:%03d', army);
+}
+
+footLocation = (offset) => {
+  return 'Footer:Unknown';
+}
+
+readFiles();

@@ -26,8 +26,10 @@
     "buffer": "^5.4.3",
     "font-awesome": "^4.7.0",
     "ngx-file-drop": "^8.0.8",
+    "printf": "^0.5.2",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
+    "yargs": "^15.0.2",
     "zone.js": "~0.9.1"
   },
   "devDependencies": {
