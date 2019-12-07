@@ -1,0 +1,12 @@
+<ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+    <div *ngFor="let a of shires">
+      <ngb-panel>
+        <ng-template ngbPanelTitle>
+          <span> <b>{{a._id}}</b> {{a.total}} </span>
+        </ng-template>
+        <ng-template ngbPanelContent>
+          <app-shire [shire]="a"></app-shire>
+        </ng-template>
+      </ngb-panel>
+    </div>
+  </ngb-accordion>

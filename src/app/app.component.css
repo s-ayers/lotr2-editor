@@ -30,6 +30,7 @@
   .content {
     display: flex;
     margin: 32px auto;
+    margin-top: 50px;
     padding: 0 16px;
     max-width: 960px;
     flex-direction: column;
@@ -270,4 +271,15 @@
 
 ngx-file-drop, .ngx-file-drop__content {
   height: 500px;
+}
+
+app-toolbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+}
+
+.content[role="main"] {
+  margin-top: 80px;
 }

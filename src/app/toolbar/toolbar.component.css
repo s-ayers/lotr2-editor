@@ -1,3 +1,5 @@
+
+
 .spacer {
     flex: 1;
   }
@@ -18,10 +20,15 @@
 
   .toolbar #twitter-logo {
     height: 40px;
-    margin: 0 16px;
+    margin: 0;
   }
 
   .toolbar #twitter-logo:hover {
     opacity: 0.8;
+  }
+  
+  app-toolbar {
+    position: fixed;
+    width: 100%;
   }
   
