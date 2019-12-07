@@ -2,21 +2,16 @@
 import { Armory} from './Armory.model';
 import {Shire} from './Shire.model';
 import {Army} from './Army.model';
+import { Inventory } from './Inventory.model';
 
 
 
 export module Game {
     export function Parse(buf: Buffer): any {
         var myGame = {}
-        myGame['gold'] = buf.readInt32LE(84864);
-        // console.log('Gold: ' + buf.readInt32LE(84864));
-        myGame['iron'] = buf.readInt32LE(84872);
-        // console.log('Iron: ' + buf.readInt32LE(84872));
-        myGame['wood'] = buf.readInt32LE(84888);
-        // console.log('Wood: ' + buf.readInt32LE(84888));
-        myGame['stone'] = buf.readInt32LE(84880);
-        // console.log('Stone: ' + buf.readInt32LE(84880));
+
         
+        myGame['inventory'] = new Inventory(buf);
         myGame['armory'] = new Armory(buf);
         
         myGame['shires'] = [];
@@ -40,12 +35,12 @@ export module Game {
         
         myGame['armies'] = [];
         for (let i = 0, offset = 87124; i < 16; i++, offset+=768) {
-            const myShire = new Shire(buf, offset, i+1);
+            const myShire = new Shire(buf, offset, i);
             myGame['shires'].push(myShire);
         }
         
         for (let i = 0, offset = 99760; i < 115; i++, offset += 420) {
-            const myArmy = new Army(buf, offset);
+            const myArmy = new Army(buf, offset, i);
             myGame['armies'].push(myArmy);
         
             // console.log(offset);
@@ -53,6 +48,23 @@ export module Game {
     
         
         return myGame;
+    }
+
+    export function Compose(buf: Buffer, Game: any) {
+console.log(Game);
+
+    Game.inventory.Compose(buf);
+    Game.armory.Compose(buf);
+
+    Game.armies.forEach(army => {
+        army.Compose(buf);
+    });
+
+    Game.shires.forEach(shire => {
+        shire.Compose(buf);
+    })
+
+        return buf;
     }
 }
 

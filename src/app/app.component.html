@@ -9,7 +9,7 @@
 
 
 
-<app-toolbar [title]="title" [name]="fileName" ></app-toolbar>
+<app-toolbar [title]="title" [name]="fileName" [file]="file" [buf]="gameBuf" (save)=onSave($event)></app-toolbar>
 
 <div class="content" role="main">
 
@@ -38,7 +38,7 @@
   </ng-container>
 
 <ng-container *ngIf="file">
-  <app-editor [game]="game"></app-editor>
+  <app-editor [game]="game" ></app-editor>
 </ng-container>
 
 
