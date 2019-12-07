@@ -13,6 +13,10 @@ import { EditorComponent } from './editor/editor.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InventoryComponent } from './inventory/inventory.component';
 import { ArmoryComponent } from './armory/armory.component';
+import { ShireComponent } from './shire/shire.component';
+import { ShireGridComponent } from './shire-grid/shire-grid.component';
+import { ArmyListComponent } from './army-list/army-list.component';
+import { ArmyComponent } from './army/army.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +26,11 @@ import { ArmoryComponent } from './armory/armory.component';
     ToolbarComponent,
     EditorComponent,
     InventoryComponent,
-    ArmoryComponent
+    ArmoryComponent,
+    ShireComponent,
+    ShireGridComponent,
+    ArmyListComponent,
+    ArmyComponent
   ],
   imports: [
     BrowserModule,

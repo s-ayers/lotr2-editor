@@ -35,12 +35,12 @@ export module Game {
         
         myGame['armies'] = [];
         for (let i = 0, offset = 87124; i < 16; i++, offset+=768) {
-            const myShire = new Shire(buf, offset, i+1);
+            const myShire = new Shire(buf, offset, i);
             myGame['shires'].push(myShire);
         }
         
         for (let i = 0, offset = 99760; i < 115; i++, offset += 420) {
-            const myArmy = new Army(buf, offset);
+            const myArmy = new Army(buf, offset, i);
             myGame['armies'].push(myArmy);
         
             // console.log(offset);
@@ -55,6 +55,10 @@ console.log(Game);
 
     Game.inventory.Compose(buf);
     Game.armory.Compose(buf);
+
+    Game.armies.forEach(army => {
+        army.Compose(buf);
+    });
 
         return buf;
     }

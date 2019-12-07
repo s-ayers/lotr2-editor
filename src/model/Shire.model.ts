@@ -9,7 +9,7 @@ const o =  {
 }
 
 export class Shire {
-    private _id: number;
+    _id: number;
 
     Happiness: number;
     Unknown_1: number;

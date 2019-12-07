@@ -1,0 +1,12 @@
+<ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+  <div *ngFor="let a of manedArmies()">
+    <ngb-panel>
+      <ng-template ngbPanelTitle>
+        <span> <b>{{a._id}}</b> {{a.total}} </span>
+      </ng-template>
+      <ng-template ngbPanelContent>
+        <app-army [army]="a"></app-army>
+      </ng-template>
+    </ngb-panel>
+  </div>
+</ngb-accordion>

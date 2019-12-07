@@ -17,14 +17,14 @@
 
     <ngb-tab title="Shires">
         <ng-template ngbTabContent>
-
+            <app-shire-grid [shires]="game.shires"></app-shire-grid>
 
         </ng-template>
     </ngb-tab>
 
     <ngb-tab title="Armies">
         <ng-template ngbTabContent>
-
+<app-army-list [armies]="game.armies"></app-army-list>
 
         </ng-template>
     </ngb-tab>
