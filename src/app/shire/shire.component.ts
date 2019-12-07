@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+const ShireMap = require('../../../shires.json');
 
 @Component({
   selector: 'app-shire',
@@ -13,4 +14,7 @@ export class ShireComponent implements OnInit {
   ngOnInit() {
   }
 
+  getShireName(id:number): string {
+    return ShireMap['england'][id];
+  }
 }

@@ -1,5 +1,8 @@
 import { isNull } from "util";
 
+const OFFSET = 87124;
+const SIZE = 768;
+
 const o =  {
     POPULATION: 24,
     COWS: 580,
@@ -25,7 +28,7 @@ export class Shire {
     Wheat_Unknown_2: number;
     Cows: number;
 
-    constructor(buf: Buffer, offset: number = 87124, id: number = null) {
+    constructor(buf: Buffer, offset: number = OFFSET, id: number = null) {
         if (!isNull(id)) {
             this._id = id;
         }
@@ -43,6 +46,16 @@ export class Shire {
         this.Wheat_Unknown_1 = buf.readUInt32LE(offset + o.WHEAT_UK_1);
         this.Wheat_Unknown_2 = buf.readUInt32LE(offset + o.WHEAT_UK_2);
 
-        this.Cows = buf.readUInt32LE(offset + o.COWS)
+        this.Cows = buf.readUInt32LE(offset + o.COWS);
+    }
+
+    Compose(buf: Buffer) {
+
+        const offset =  OFFSET + (this._id * SIZE);
+
+        buf.writeInt8(this.Happiness, offset + o.HAPPINESS);
+        buf.writeUInt32LE(this.Population, offset + o.POPULATION);
+        buf.writeUInt32LE(this.Cows, offset + o.COWS);
+
     }
 }

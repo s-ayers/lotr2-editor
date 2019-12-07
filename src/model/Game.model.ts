@@ -60,6 +60,10 @@ console.log(Game);
         army.Compose(buf);
     });
 
+    Game.shires.forEach(shire => {
+        shire.Compose(buf);
+    })
+
         return buf;
     }
 }
