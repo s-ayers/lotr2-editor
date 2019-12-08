@@ -17,6 +17,7 @@ import { ShireComponent } from './shire/shire.component';
 import { ShireGridComponent } from './shire-grid/shire-grid.component';
 import { ArmyListComponent } from './army-list/army-list.component';
 import { ArmyComponent } from './army/army.component';
+import { CountyListComponent } from './county-list/county-list.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ArmyComponent } from './army/army.component';
     ShireComponent,
     ShireGridComponent,
     ArmyListComponent,
-    ArmyComponent
+    ArmyComponent,
+    CountyListComponent
   ],
   imports: [
     BrowserModule,
