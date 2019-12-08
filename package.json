@@ -10,6 +10,9 @@
     "e2e": "ng e2e",
     "deploy": "ng build  --prod --outputPath=docs --deleteOutputPath=true --baseHref=/lotr2-editor/ --deployUrl=/lotr2-editor/"
   },
+  "bin": {
+    "lotr2-diff": "./bin/diff.js"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~8.2.4",
@@ -24,6 +27,7 @@
     "angular-font-awesome": "^3.1.2",
     "bootstrap": "^4.4.1",
     "buffer": "^5.4.3",
+    "chalk": "^3.0.0",
     "font-awesome": "^4.7.0",
     "ngx-file-drop": "^8.0.8",
     "printf": "^0.5.2",
