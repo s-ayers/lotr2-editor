@@ -1,37 +1,87 @@
-<div class="form-group">
-    <label>Peasants</label>
-    <input  [(ngModel)]="army.peasants" type="number" class="form-control" min="0">
+<div class="form-group row">
+  <label class="col-7 col-form-label">Peasants</label>
+
+  <div class="col-5">
+    <input
+      [(ngModel)]="army.peasants"
+      type="number"
+      class="form-control"
+      min="0"
+    />
+  </div>
 </div>
 
-<div class="form-group">
-    <label>Crossbowmen</label>
-    <input  [(ngModel)]="army.crossbow" type="number" class="form-control" min="0">
+<div class="form-group row">
+  <label class="col-7 col-form-label">Crossbowmen</label>
+
+  <div class="col-5">
+    <input
+      [(ngModel)]="army.crossbow"
+      type="number"
+      class="form-control"
+      min="0"
+    />
+  </div>
 </div>
 
-<div class="form-group">
-    <label>Macemen</label>
-    <input  [(ngModel)]="army.mace" type="number" class="form-control" min="0">
+<div class="form-group row">
+  <label class="col-7 col-form-label">Macemen</label>
+
+  <div class="col-5">
+    <input [(ngModel)]="army.mace" type="number" class="form-control" min="0" />
+  </div>
 </div>
 
-<div class="form-group">
-    <label>Swordsmen</label>
-    <input  [(ngModel)]="army.sword" type="number" class="form-control" min="0">
+<div class="form-group row">
+  <label class="col-7 col-form-label">Swordsmen</label>
+
+  <div class="col-5">
+    <input
+      [(ngModel)]="army.sword"
+      type="number"
+      class="form-control"
+      min="0"
+    />
+  </div>
 </div>
 
-<div class="form-group">
-    <label>Pikemen</label>
-    <input  [(ngModel)]="army.pike" type="number" class="form-control" min="0">
+<div class="form-group row">
+  <label class="col-7 col-form-label">Pikemen</label>
+
+  <div class="col-5">
+    <input [(ngModel)]="army.pike" type="number" class="form-control" min="0" />
+  </div>
 </div>
-<div class="form-group">
-    <label>Archers</label>
-    <input  [(ngModel)]="army.bow" type="number" class="form-control" min="0">
+<div class="form-group row">
+  <label class="col-7 col-form-label">Archers</label>
+
+  <div class="col-5">
+    <input [(ngModel)]="army.bow" type="number" class="form-control" min="0" />
+  </div>
 </div>
-<div class="form-group">
-    <label>Knights</label>
-    <input  [(ngModel)]="army.knight" type="number" class="form-control" min="0">
+<div class="form-group row">
+  <label class="col-7 col-form-label">Knights</label>
+
+  <div class="col-5">
+    <input
+      [(ngModel)]="army.knight"
+      type="number"
+      class="form-control"
+      min="0"
+    />
+  </div>
 </div>
 
-<div class="form-group">
-    <label>Total</label>
-    <input  [value]="army.sum()" type="number" readonly class="form-control" min="0">
+<div class="form-group row">
+  <label class="col-7 col-form-label">Total</label>
+
+  <div class="col-5">
+    <input
+      [value]="army.sum()"
+      type="number"
+      readonly
+      class="form-control"
+      min="0"
+    />
+  </div>
 </div>

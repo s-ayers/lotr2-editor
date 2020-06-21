@@ -7,8 +7,8 @@ const o =  {
     POPULATION: 24,
     COWS: 580,
     HAPPINESS: 0,
-    WHEAT_UK_1: 372,
-    WHEAT_UK_2: 536
+    WHEAT_NEXT: 372,
+    WHEAT_NOW: 536
 }
 
 export class Shire {
@@ -25,7 +25,7 @@ export class Shire {
 
     Population: number;
     Wheat_Unknown_1: number;
-    Wheat_Unknown_2: number;
+    Wheat: number;
     Cows: number;
 
     constructor(buf: Buffer, offset: number = OFFSET, id: number = null) {
@@ -43,8 +43,8 @@ export class Shire {
         this.Unknown_7 = buf.readUInt32LE(offset + 25);
 
         this.Population = buf.readUInt32LE(offset + o.POPULATION);
-        this.Wheat_Unknown_1 = buf.readUInt32LE(offset + o.WHEAT_UK_1);
-        this.Wheat_Unknown_2 = buf.readUInt32LE(offset + o.WHEAT_UK_2);
+        this.Wheat_Unknown_1 = buf.readUInt32LE(offset + o.WHEAT_NEXT);
+        this.Wheat = buf.readUInt32LE(offset + o.WHEAT_NOW);
 
         this.Cows = buf.readUInt32LE(offset + o.COWS);
     }

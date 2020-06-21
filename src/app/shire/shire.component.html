@@ -1,26 +1,61 @@
 <div class="form-group">
+  <div class="form-group">
+    <label>id: {{ shire._id }} </label>
+  </div>
 
-    <div class="form-group">
-        <label >id: {{shire._id}} </label>
-    </div>
+  <div class="form-group">
+    <label for="happiness">Happiness</label>
+    <input
+      id="happiness"
+      [(ngModel)]="shire.Happiness"
+      type="number"
+      class="form-control"
+      min="0"
+      max="100"
+    />
+  </div>
 
-    <div class="form-group">
-        <label for="happiness">Happiness</label>
-        <input id="happiness" [(ngModel)]="shire.Happiness" type="number" class="form-control" min="0" max="100">
-    </div>
+  <div class="form-group">
+    <label for="population">Population</label>
+    <input
+      id="population"
+      [(ngModel)]="shire.Population"
+      type="number"
+      class="form-control"
+      min="0"
+    />
+  </div>
 
-    <div class="form-group">
-        <label for="population">Population</label>
-        <input id="population" [(ngModel)]="shire.Population" type="number" class="form-control" min="0">
-    </div>
+  <div class="form-group">
+    <label for="cows">Cows</label>
+    <input
+      id="cows"
+      [(ngModel)]="shire.Cows"
+      type="number"
+      class="form-control"
+      min="0"
+    />
+  </div>
 
-    <div class="form-group">
-        <label for="cows">Cows</label>
-        <input id="cows" [(ngModel)]="shire.Cows" type="number" class="form-control" min="0">
-    </div>
+  <div class="form-group">
+    <label for="cows">Wheat</label>
+    <input
+      id="cows"
+      [(ngModel)]="shire.Wheat"
+      type="number"
+      class="form-control"
+      min="0"
+    />
+  </div>
 
-
-
-
-
+  <div class="form-group">
+    <label for="cows">Wheat next season</label>
+    <input
+      id="cows"
+      [(ngModel)]="shire.Wheat_Unknown_1"
+      type="number"
+      class="form-control"
+      min="0"
+    />
+  </div>
 </div>

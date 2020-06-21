@@ -5,7 +5,12 @@
         <span> <b>{{a._id}}</b> {{a.total}} </span>
       </ng-template>
       <ng-template ngbPanelContent>
-        <app-army [army]="a"></app-army>
+        <div class="row">
+          <div class="col-3">
+            <app-army [army]="a"></app-army>
+          </div>
+        </div>
+        
       </ng-template>
     </ngb-panel>
   </div>
