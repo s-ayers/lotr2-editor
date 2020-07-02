@@ -1,12 +1,33 @@
-<ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
-  <div *ngFor="let a of manedArmies()">
-    <ngb-panel>
+<!-- <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0"> -->
+  <!-- <div *ngFor="let a of manedArmies()"> -->
+
+
+
+    <div class="d-flex">
+      <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-pills" orientation="vertical">
+        <li *ngFor="let a of manedArmies()" ngbNavItem="{{a._id}}">
+          <a ngbNavLink> <b>{{a._id}}</b> {{a.total}} </a>
+          <ng-template ngbNavContent>
+            <app-army [army]="a"></app-army>
+           </ng-template>
+        </li>
+      </ul>
+    
+      <div [ngbNavOutlet]="nav" class="ml-4"></div>
+    </div>
+
+    <!-- <ngb-panel>
       <ng-template ngbPanelTitle>
         <span> <b>{{a._id}}</b> {{a.total}} </span>
       </ng-template>
       <ng-template ngbPanelContent>
-        <app-army [army]="a"></app-army>
+        <div class="row">
+          <div class="col-4">
+            <app-army [army]="a"></app-army>
+          </div>
+        </div>
+
       </ng-template>
-    </ngb-panel>
-  </div>
-</ngb-accordion>
+    </ngb-panel> -->
+  <!-- </div>
+</ngb-accordion> -->

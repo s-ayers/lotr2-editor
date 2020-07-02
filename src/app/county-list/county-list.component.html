@@ -1,4 +1,19 @@
-<ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+<div class="d-flex">
+  <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-pills" orientation="vertical">
+    <li *ngFor="let a of shires" ngbNavItem="{{a._id}}">
+      <a ngbNavLink> <b>{{england(a._id)}}</b> {{a.total}} </a>
+      <ng-template ngbNavContent>
+        <app-shire [shire]="a"></app-shire>
+       </ng-template>
+    </li>
+  </ul>
+
+  <div [ngbNavOutlet]="nav" class="ml-4"></div>
+</div>
+
+
+
+<!-- <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
     <div *ngFor="let a of shires">
       <ngb-panel>
         <ng-template ngbPanelTitle>
@@ -9,4 +24,4 @@
         </ng-template>
       </ngb-panel>
     </div>
-  </ngb-accordion>
+  </ngb-accordion> -->

@@ -1,37 +1,471 @@
-<div class="form-group">
-    <label>Peasants</label>
-    <input  [(ngModel)]="army.peasants" type="number" class="form-control" min="0">
-</div>
+<br/>
 
 <div class="form-group">
-    <label>Crossbowmen</label>
-    <input  [(ngModel)]="army.crossbow" type="number" class="form-control" min="0">
+  <label>Name</label>
+  <select class="form-control" [(ngModel)]="army.name">
+    <option></option>
+    <option value="0">The Lions.</option>
+    <option value="1">The Dragons.</option>
+    <option value="2">The Pigs.</option>
+    <option value="3">The Foxes.</option>
+    <option value="4">The Stallions.</option>
+    <option value="5">The Pigs.</option>
+    <option value="6">The Bears.</option>
+    <option value="7">The Tigers.</option>
+    <option value="8">The Dogs.</option>
+    <option value="9">The Hydras.</option>
+    <option value="10">The Boars.</option>
+    <option value="11">The Stags.</option>
+    <option value="12">The Panthers.</option>
+    <option value="13">The Elephants.</option>
+    <option value="14">The Cats.</option>
+    <option value="15">The Porcupines.</option>
+    <option value="16">The Animals.</option>
+    <option value="17">The Lizards.</option>
+    <option value="18">The Mice.</option>
+    <option value="19">The Wolves.</option>
+    <option value="20">The Monkeys.</option>
+    <option value="21">The Spiders.</option>
+    <option value="22">The Hyenas.</option>
+    <option value="23">The Oxen.</option>
+    <option value="24">The Invincibles.</option>
+    <option value="25">The Conquerors.</option>
+    <option value="26">The Lords.</option>
+    <option value="27">The Heroes.</option>
+    <option value="28">The Famous Few.</option>
+    <option value="29">The Protectors.</option>
+    <option value="30">The Champions.</option>
+    <option value="31">The Kings.</option>
+    <option value="32">The Best Men.</option>
+    <option value="33">The Winners.</option>
+    <option value="34">The Victorious.</option>
+    <option value="35">The Eternals.</option>
+    <option value="36">The Prized.</option>
+    <option value="37">The Unbeatables.</option>
+    <option value="38">The Gentlemen.</option>
+    <option value="38">The Men at arms.</option>
+    <option value="39">The Immortals.</option>
+    <option value="40">The Jokers.</option>
+    <option value="41">The Earls.</option>
+    <option value="42">The Warriors.</option>
+    <option value="43">The Legendary.</option>
+    <option value="44">The Dukes.</option>
+    <option value="45">The Fighters.</option>
+    <option value="46">The Jacks.</option>
+    <option value="47">The Greeks.</option>
+    <option value="48">The Trojans.</option>
+    <option value="49">The Persians.</option>
+    <option value="50">The Etruscans.</option>
+    <option value="51">The Gauls.</option>
+    <option value="52">The Egyptians.</option>
+    <option value="53">The Parthians.</option>
+    <option value="54">The Phoenicians.</option>
+    <option value="55">The Numidians.</option>
+    <option value="56">The Vikings.</option>
+    <option value="57">The Saxons.</option>
+    <option value="58">The Danes.</option>
+    <option value="59">The Celts.</option>
+    <option value="60">The Carthaginians.</option>
+    <option value="61">The Maurii.</option>
+    <option value="62">The Goths.</option>
+    <option value="63">The Huns.</option>
+    <option value="64">The Spartans.</option>
+    <option value="65">The Macedonians.</option>
+    <option value="66">The Syrians.</option>
+    <option value="67">The Franks.</option>
+    <option value="68">The Visigoths.</option>
+    <option value="69">The Israelites.</option>
+    <option value="70">The Picts.</option>
+    <option value="71">The Crushers.</option>
+    <option value="72">The Damned.</option>
+    <option value="73">The Ruthless.</option>
+    <option value="74">The Destroyers.</option>
+    <option value="75">The Merciless.</option>
+    <option value="76">The Butchers.</option>
+    <option value="77">The Killers.</option>
+    <option value="78">The Rotters.</option>
+    <option value="79">The Naughty Boys.</option>
+    <option value="80">The Evil Ones.</option>
+    <option value="81">The Sinners.</option>
+    <option value="82">The Destroyers.</option>
+    <option value="83">The Wreckers.</option>
+    <option value="84">The Villains.</option>
+    <option value="85">The Bad Lads.</option>
+    <option value="86">The Ogres.</option>
+    <option value="87">The Pirates.</option>
+    <option value="88">The No-gooders.</option>
+    <option value="89">The Bullies.</option>
+    <option value="90">The Cads.</option>
+    <option value="91">The Twisters.</option>
+    <option value="92">The Robbers.</option>
+    <option value="93">The Rogues.</option>
+    <option value="94">The Antiheroes.</option>
+    <option value="95">The Swans.</option>
+    <option value="96">The Eagles.</option>
+    <option value="97">The Sparrows.</option>
+    <option value="98">The Hawks.</option>
+    <option value="99">The Magpies.</option>
+    <option value="100">The Wrens.</option>
+    <option value="101">The Vultures.</option>
+    <option value="102">The Ravens</option>
+    <option value="103">The Falcons.</option>
+    <option value="104">The Crows.</option>
+    <option value="105">The Cuckoos.</option>
+    <option value="106">The Skylarks.</option>
+    <option value="107">The Pigeons.</option>
+    <option value="108">The Owls.</option>
+    <option value="109">The Hens.</option>
+    <option value="110">The Geese.</option>
+    <option value="111">The Nuthatches.</option>
+    <option value="112">The Rooks.</option>
+    <option value="113">The Gulls.</option>
+    <option value="114">The Pheasants.</option>
+    <option value="115">The Blackbirds.</option>
+    <option value="116">The Kingfishers.</option>
+    <option value="117">The Herons.</option>
+    <option value="118">The Thrushes.</option>
+    <option value="119">The people.</option>
+  </select>
 </div>
 
-<div class="form-group">
-    <label>Macemen</label>
-    <input  [(ngModel)]="army.mace" type="number" class="form-control" min="0">
+
+
+
+<div class="row">
+  <div class="col">
+    <div class="row">
+      <h3>Soldiers</h3>
+    </div>
+    <div class="form-group row">
+      <label class="col col-form-label">Peasants</label>
+
+      <div class="col">
+        <input
+          [(ngModel)]="army.peasants"
+          type="number"
+          class="form-control"
+          min="0"
+        />
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col col-form-label">Crossbowmen</label>
+
+      <div class="col">
+        <input
+          [(ngModel)]="army.crossbow"
+          type="number"
+          class="form-control"
+          min="0"
+        />
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col col-form-label">Macemen</label>
+
+      <div class="col">
+        <input
+          [(ngModel)]="army.mace"
+          type="number"
+          class="form-control"
+          min="0"
+        />
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col col-form-label">Swordsmen</label>
+
+      <div class="col">
+        <input
+          [(ngModel)]="army.sword"
+          type="number"
+          class="form-control"
+          min="0"
+        />
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col col-form-label">Pikemen</label>
+
+      <div class="col">
+        <input
+          [(ngModel)]="army.pike"
+          type="number"
+          class="form-control"
+          min="0"
+        />
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col col-form-label">Archers</label>
+
+      <div class="col">
+        <input
+          [(ngModel)]="army.bow"
+          type="number"
+          class="form-control"
+          min="0"
+        />
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col col-form-label">Knights</label>
+
+      <div class="col">
+        <input
+          [(ngModel)]="army.knight"
+          type="number"
+          class="form-control"
+          min="0"
+        />
+      </div>
+    </div>
+  </div>
+
+  <div class="col">
+  
+    <!-- <div class="row"> -->
+      <h3>Mercenaries</h3>
+    <!-- </div> -->
+  
+    <!-- <div class="row"> -->
+
+
+      <div class="form-group">
+        <label>Units</label>
+        <input
+          [(ngModel)]="army.mercenaries"
+          type="number"
+          class="form-control"
+          min="0"
+        />
+      </div>
+
+      
+      <!-- <div class="form-group row">
+        <label class="col col-form-label">Mercenaries</label>
+
+        <div class="col">
+          <input
+            [(ngModel)]="army.mercenaries"
+            type="number"
+            class="form-control"
+            min="0"
+          />
+        </div>
+      </div> -->
+
+
+      <div class="form-group">
+        <label>Ethnicity</label>
+        <select [(ngModel)]="army.mercenaryRace" class="form-control">
+          <option value="0">None</option>
+          <option value="1">Scottish</option>
+          <option value="2">Irish</option>
+          <option value="3">Morrish</option>
+          <option value="4">Welsh</option>
+          <option value="5">Danish</option>
+          <option value="6">Swedish</option>
+          <option value="7">Flemish</option>
+          <option value="8">Norman</option>
+          <option value="9">Saxon</option>
+          <option value="10">Burgundian</option>
+          <option value="11">Spanish</option>
+          <option value="12">Angevin</option>
+        </select>
+      </div>
+
+<!-- 
+      <div class="form-group row">
+        <label class="col col-form-label">Ethnicity</label>
+
+        <div class="col">
+          <select [(ngModel)]="army.mercenaryRace" class="form-control">
+            <option value="0">None</option>
+            <option value="1">Scottish</option>
+            <option value="2">Irish</option>
+            <option value="3">Morrish</option>
+            <option value="4">Welsh</option>
+            <option value="5">Danish</option>
+            <option value="6">Swedish</option>
+            <option value="7">Flemish</option>
+            <option value="8">Norman</option>
+            <option value="9">Saxon</option>
+            <option value="10">Burgundian</option>
+            <option value="11">Spanish</option>
+            <option value="12">Angevin</option>
+          </select>
+        </div>
+      </div> -->
+
+      <div class="form-group">
+        <label>Type</label>
+        <select [(ngModel)]="army.mercenaryType" class="form-control">
+          <option value="0">None</option>
+          <option value="1">Crossbowmen</option>
+          <option value="2">Macemen</option>
+          <option value="3">Swordsmen</option>
+          <option value="4">Pikemen</option>
+          <option value="5">Archers</option>
+          <option value="6">Knights</option>
+        </select>
+      </div>
+
+<!-- 
+      <div class="form-group row">
+        <label class="col col-form-label">Mercenaries Type</label>
+
+        <div class="col">
+          <select [(ngModel)]="army.mercenaryType" class="form-control">
+            <option value="0">None</option>
+            <option value="1">Crossbowmen</option>
+            <option value="2">Macemen</option>
+            <option value="3">Swordsmen</option>
+            <option value="4">Pikemen</option>
+            <option value="5">Archers</option>
+            <option value="6">Knights</option>
+            <option value="7">unknown</option>
+          </select>
+        </div>
+      </div> -->
+    </div>
+  </div>
+<!-- </div> -->
+
+<hr />
+
+<div class="form-group row">
+  <label class="col col-form-label">Total</label>
+
+  <div class="col">
+    <input
+      [value]="army.sum()"
+      type="number"
+      readonly
+      class="form-control"
+      min="0"
+    />
+  </div>
 </div>
 
-<div class="form-group">
-    <label>Swordsmen</label>
-    <input  [(ngModel)]="army.sword" type="number" class="form-control" min="0">
+<!-- <div class="form-group row">
+  <label class="col col-form-label">Total Moves</label>
+
+  <div class="col">
+    <input
+      [(ngModel)]="army.total_moves"
+      type="number"
+      class="form-control"
+      min="0"
+    />
+  </div>
+</div> -->
+
+<div class="form-group row">
+  <label class="col col-form-label">Has Moved</label>
+
+  <div class="col">
+    <input
+      [(ngModel)]="army.has_moved"
+      type="number"
+      class="form-control"
+      min="0"
+    />
+  </div>
 </div>
 
-<div class="form-group">
-    <label>Pikemen</label>
-    <input  [(ngModel)]="army.pike" type="number" class="form-control" min="0">
-</div>
-<div class="form-group">
-    <label>Archers</label>
-    <input  [(ngModel)]="army.bow" type="number" class="form-control" min="0">
-</div>
-<div class="form-group">
-    <label>Knights</label>
-    <input  [(ngModel)]="army.knight" type="number" class="form-control" min="0">
+<div class="form-group row">
+  <label class="col col-form-label">Catapults</label>
+
+  <div class="col">
+    <input
+      [(ngModel)]="army.catapults"
+      type="number"
+      class="form-control"
+      min="0"
+    />
+    <p>
+      <ngb-progressbar
+        type="success"
+        textType="white"
+        [value]="army.catapultsProgress"
+        [showValue]="true"
+      ></ngb-progressbar>
+    </p>
+  </div>
 </div>
 
-<div class="form-group">
-    <label>Total</label>
-    <input  [value]="army.sum()" type="number" readonly class="form-control" min="0">
+<div class="form-group row">
+  <label class="col col-form-label">Seige Towers</label>
+
+  <div class="col">
+    <input
+      [(ngModel)]="army.towers"
+      type="number"
+      class="form-control"
+      min="0"
+    />
+    <p>
+      <ngb-progressbar
+        type="success"
+        textType="white"
+        [value]="army.towersProgress"
+        [showValue]="true"
+      ></ngb-progressbar>
+    </p>
+  </div>
+</div>
+
+
+<div class="form-group row">
+  <label class="col col-form-label">Battering Rams</label>
+
+  <div class="col">
+    <input [(ngModel)]="army.rams" type="number" class="form-control" min="0" />
+    <p>
+      <ngb-progressbar
+        type="success"
+        textType="white"
+        [value]="army.ramsProgress"
+        [showValue]="true"
+      ></ngb-progressbar>
+    </p>
+  </div>
+</div>
+<!-- 
+<div class="form-group row">
+  <div class="col-12">
+  </div>
+</div> -->
+
+<div class="form-group row">
+  <label class="col col-form-label">Unknown</label>
+
+  <div class="col">
+    <input
+      [(ngModel)]="army.unknown"
+      type="number"
+      class="form-control"
+      min="0"
+    />
+  </div>
+</div>
+
+<hr />
+
+<div class="form-group row">
+  <label class="col col-form-label">Mercenaries Wages</label>
+
+  <div class="col">
+    <input
+      [(ngModel)]="army.mercenaryWage"
+      type="number"
+      class="form-control"
+      min="0"
+    />
+  </div>
 </div>
