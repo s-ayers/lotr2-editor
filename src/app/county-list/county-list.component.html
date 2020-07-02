@@ -1,5 +1,5 @@
 <div class="d-flex">
-  <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-pills" orientation="vertical">
+  <ul ngbNav #nav="ngbNav" class="nav-pills" orientation="vertical">
     <li *ngFor="let a of shires" ngbNavItem="{{a._id}}">
       <a ngbNavLink> <b>{{england(a._id)}}</b> {{a.total}} </a>
       <ng-template ngbNavContent>

@@ -4,7 +4,7 @@
 
 
     <div class="d-flex">
-      <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-pills" orientation="vertical">
+      <ul ngbNav #nav="ngbNav"  class="nav-pills" orientation="vertical">
         <li *ngFor="let a of manedArmies()" ngbNavItem="{{a._id}}">
           <a ngbNavLink> <b>{{a._id}}</b> {{a.total}} </a>
           <ng-template ngbNavContent>
