@@ -4,6 +4,37 @@
   </div>
 
   <div class="form-group">
+    <label>Ruler</label>
+    <select [(ngModel)]="shire.PlayerId" class="form-control">
+      <option value="0">Self Governed</option>
+      <option value="1">The Player</option>
+      <option value="2">The Baron</option>
+      <option value="3">The Knight</option>
+      <option value="4">The Countess</option>
+      <option value="5">The Bishop</option>
+    </select>
+
+  </div>
+
+  <div class="form-group">
+    <label>Color</label>
+    <select [(ngModel)]="shire.Color" class="form-control">
+      <option value="0">Self Governed</option>
+      <option value="1">Red</option>
+      <option value="2">Yellow</option>
+      <option value="3">Black</option>
+      <option value="4">Purple</option>
+      <option value="5">Blue</option>
+    </select>
+
+  </div>
+
+  <div class="form-group">
+    <label>Change from tax</label>
+    {{shire.HappinessTax}}
+  </div>
+
+  <div class="form-group">
     <label for="happiness">Happiness</label>
     <input
       id="happiness"
@@ -13,6 +44,14 @@
       min="0"
       max="100"
     />
+  </div>
+  <div class="form-group">
+    <label>Happiness Last Season</label>
+    {{shire.HappinessLastSeason}}
+  </div>
+  <div class="form-group">
+    <label>Change from tax Last Season</label>
+    {{shire.HappinessTaxLastSeason}}
   </div>
 
   <div class="form-group">
@@ -27,6 +66,21 @@
   </div>
 
   <div class="form-group">
+    <label for="tax">Tax</label>
+    <input
+      id="tax"
+      [(ngModel)]="shire.Tax"
+      type="number"
+      class="form-control"
+      min="0"
+      max="50"
+    />
+  </div>
+  <div class="form-group">
+    <label>Gold from tax</label>
+    {{shire.Revenue}}
+  </div>
+  <div class="form-group">
     <label for="cows">Cows</label>
     <input
       id="cows"
@@ -36,7 +90,16 @@
       min="0"
     />
   </div>
-
+  <div class="form-group">
+    <label for="cows">Change in cows for season</label>
+    <input
+      id="CowsNext"
+      [(ngModel)]="shire.CowsNext"
+      type="number"
+      class="form-control"
+      min="0"
+    />
+  </div>
   <div class="form-group">
     <label for="cows">Wheat</label>
     <input
@@ -57,5 +120,63 @@
       class="form-control"
       min="0"
     />
+  </div>
+
+
+  <div class="form-group">
+    <label for="iron">Mining</label>
+    <input
+      id="mining"
+      [(ngModel)]="shire.Mining"
+      type="checkbox"
+      class="form-control"
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="iron">Iron</label>
+    <input
+      id="iron"
+      [(ngModel)]="shire.Iron"
+      [readonly]="!shire.Mining"
+      type="number"
+      class="form-control"
+      min="0"
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="forestry">Forestry</label>
+    <input
+      id="forestry"
+      [(ngModel)]="shire.Forestry"
+      type="checkbox"
+      class="form-control"
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="wood">Wood</label>
+    <input
+      id="wood"
+      [(ngModel)]="shire.Wood"
+      [readonly]="!shire.Forestry"
+      type="number"
+      class="form-control"
+      min="0"
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="wood">Wood Labor</label>
+    {{shire.LaborWood}}
+  </div>
+  <div class="form-group">
+    <label for="wood">Iron Labor</label>
+    {{shire.LaborIron}}
+  </div>
+  <div class="form-group">
+    <label for="wood">Cattle Labor</label>
+    {{shire.LaborCattle}}
   </div>
 </div>

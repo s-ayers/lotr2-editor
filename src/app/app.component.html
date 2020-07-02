@@ -33,11 +33,11 @@
     </svg>
 
   </div> -->
-  <ng-container *ngIf="!file">
+  <ng-container *ngIf="!gameBuf">
     <app-file-drop [file]="file" (hasData)="setFile($event)"></app-file-drop>
   </ng-container>
 
-<ng-container *ngIf="file">
+<ng-container *ngIf="gameBuf">
   <app-editor [game]="game" ></app-editor>
 </ng-container>
 

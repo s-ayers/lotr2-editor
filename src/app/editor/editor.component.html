@@ -2,17 +2,24 @@
 
     <ngb-tab title="Inventory">
         <ng-template ngbTabContent>
-            <app-inventory [inventory]="game.inventory"></app-inventory>
+            <div class="row">
+                <div class="col">
+                    <app-inventory [inventory]="game.inventory"></app-inventory>
+                </div>
+                <div class="col">
+                    <app-armory [armory]="game.armory"></app-armory>
+                </div>
+            </div>
 
         </ng-template>
     </ngb-tab>
     
-    <ngb-tab title="Armory">
+    <!-- <ngb-tab title="Armory">
         <ng-template ngbTabContent>
-            <app-armory [armory]="game.armory"></app-armory>
+            
 
         </ng-template>
-    </ngb-tab>
+    </ngb-tab> -->
 
 
     <ngb-tab title="Counties">
