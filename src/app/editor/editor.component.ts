@@ -9,13 +9,8 @@ import { FormArray } from '@angular/forms';
   styleUrls: ['./editor.component.css']
 })
 export class EditorComponent implements OnInit {
-
   @Input() game: any;
-  ngOnInit(){
+  ngOnInit() {}
 
-  }
-
-  constructor(private fb: FormBuilder) { }
-  
-
+  constructor(private fb: FormBuilder) {}
 }

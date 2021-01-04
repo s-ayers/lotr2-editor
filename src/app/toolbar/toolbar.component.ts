@@ -13,8 +13,10 @@ export class ToolbarComponent implements OnInit {
   @Input() file: File;
   @Input() buf: Buffer;
   @Output() save: EventEmitter<boolean> = new EventEmitter<boolean>();
+  @Output() clear: EventEmitter<boolean> = new EventEmitter<boolean>();
+  @Output() demo: EventEmitter<boolean> = new EventEmitter<boolean>();
   fileUrl: any = null;
-  saved: boolean = false;
+  saved = false;
 
   constructor(private sanitizer: DomSanitizer) { }
   ngOnInit() {
@@ -27,4 +29,11 @@ export class ToolbarComponent implements OnInit {
 
   }
 
+  clearFile() {
+    this.clear.emit(true);
+  }
+
+  loadDemo() {
+    this.demo.emit(true);
+  }
 }

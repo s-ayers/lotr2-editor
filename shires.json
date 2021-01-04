@@ -14,5 +14,18 @@
         "Nottinghamshire",
         "Lancashire",
         "Yorkshire"
+    ],
+    "scotland": [
+        "The Normans",
+        "Dumfries",
+        "Berwick",
+        "Argyll",
+        "Lothian",
+        "County of Fife",
+        "Perth",
+        "Angus",
+        "Aberdeen",
+        "Banff",
+        "The Highlands"
     ]
 }

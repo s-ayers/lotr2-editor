@@ -12,4 +12,4 @@ const o =  {
     WOOD_NEXT: 668,
     MINING: 675,
     IRON_NEXT: 692
-}
+};

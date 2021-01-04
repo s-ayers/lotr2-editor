@@ -1,6 +1,9 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { NgxFileDropEntry, FileSystemFileEntry, FileSystemDirectoryEntry } from 'ngx-file-drop';
-
+import {
+  NgxFileDropEntry,
+  FileSystemFileEntry,
+  FileSystemDirectoryEntry
+} from 'ngx-file-drop';
 
 @Component({
   selector: 'app-file-drop',
@@ -15,24 +18,18 @@ export class FileDropComponent {
   public dropped(files: NgxFileDropEntry[]) {
     this.files = files;
     for (const droppedFile of files) {
-
       // Is it a file?
       if (droppedFile.fileEntry.isFile) {
         const fileEntry = droppedFile.fileEntry as FileSystemFileEntry;
 
         fileEntry.file((file: File) => {
           this.hasData.emit(file);
-
         });
-      } 
-
+      }
     }
   }
 
-  public fileOver(event) {
-  }
+  public fileOver(event) {}
 
-  public fileLeave(event) {
-  }
-
+  public fileLeave(event) {}
 }
