@@ -7,14 +7,12 @@ const ShireMap = require('../../../shires.json');
   styleUrls: ['./shire.component.css']
 })
 export class ShireComponent implements OnInit {
-
   @Input() shire: any;
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
-  getShireName(id:number): string {
+  getShireName(id: number): string {
     return ShireMap['england'][id];
   }
 }

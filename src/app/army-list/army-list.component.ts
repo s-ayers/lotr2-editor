@@ -6,22 +6,19 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./army-list.component.css']
 })
 export class ArmyListComponent implements OnInit {
-
   @Input() armies: any;
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   manedArmies() {
     const mArmies = [];
-    this.armies.forEach(army => {
+    this.armies.forEach((army) => {
       if (army.total > 0) {
         mArmies.push(army);
       }
     });
-  
+
     return mArmies;
   }
-
 }

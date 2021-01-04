@@ -1,20 +1,30 @@
+const OFFSET = 84864;
+const SIZE = 332;
+
+const o = {
+    GOLD: 84864,
+    IRON: 84872,
+    STONE: 84880,
+    WOOD: 84888
+};
+
 export class Inventory {
-    Gold = 0;
-    Wood = 0;
-    Stone = 0;
-    Iron = 0;
+    Gold: number;
+    Wood: number;
+    Stone: number;
+    Iron: number;
 
     constructor(buf: Buffer) {
-        this.Gold = buf.readInt32LE(84864);
-        this.Iron = buf.readInt32LE(84872);
-        this.Wood = buf.readInt32LE(84888);
-        this.Stone = buf.readInt32LE(84880);
+        this.Gold = buf.readInt32LE(o.GOLD);
+        this.Iron = buf.readInt32LE(o.IRON);
+        this.Stone = buf.readInt32LE(o.STONE);
+        this.Wood = buf.readInt32LE(o.WOOD);
     }
 
     Compose(buf: Buffer) {
-        buf.writeInt32LE(this.Gold, 84864);
-        buf.writeInt32LE(this.Iron, 84872);
-        buf.writeInt32LE(this.Wood, 84888);
-        buf.writeInt32LE(this.Stone, 84880);
+        buf.writeInt32LE(this.Gold, o.GOLD);
+        buf.writeInt32LE(this.Iron, o.IRON);
+        buf.writeInt32LE(this.Stone, o.STONE);
+        buf.writeInt32LE(this.Wood, o.WOOD);
     }
 }

@@ -7,12 +7,11 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CountyListComponent implements OnInit {
   @Input() shires: any;
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
-  england(id: number):string {
+  england(id: number): string {
     const counties = [
       'Duchy of Cornwall',
       'Wiltshire',
@@ -27,7 +26,7 @@ export class CountyListComponent implements OnInit {
       'Lincolnshire',
       'Nottinghamshire',
       'Lancashire',
-      'Yorkshire',
+      'Yorkshire'
     ];
 
     return counties[id] || id.toString();

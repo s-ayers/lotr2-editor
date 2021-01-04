@@ -9,7 +9,7 @@
 
 
 
-<app-toolbar [title]="title" [name]="fileName" [file]="file" [buf]="gameBuf" (save)=onSave($event)></app-toolbar>
+<app-toolbar [title]="title" [name]="fileName" [file]="file" [buf]="gameBuf" (save)=onSave($event) (clear)="onClearFile($event)"></app-toolbar>
 
 <div class="content" role="main">
 
