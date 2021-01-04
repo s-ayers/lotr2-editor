@@ -36,6 +36,12 @@
       </a>
     </div>
 
+    <div *ngIf="!name" style="margin-right:25px;margin-top:5px;">
+      <a (click)="loadDemo()" >
+        <fa name="bullhorn" size="2x"></fa>
+      </a>
+    </div>
+
   <div *ngIf="name" style="margin-right:25px;margin-top:5px;">
     <a (click)="clearFile()" >
       <fa name="ban" size="2x"></fa>

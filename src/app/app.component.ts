@@ -81,6 +81,25 @@ export class AppComponent implements OnInit {
 
   onClearFile(data: boolean) {
     this.file = null;
+    this.fileName = null;
     this.gameBuf = null;
   }
+
+onLoadDemo(data: boolean) {
+  this.http
+  .get('assets/game.sav', {
+    observe: 'response',
+    responseType: 'arraybuffer'
+  })
+  .subscribe((d) => {
+    console.log(d);
+    // let reader = new FileReader();
+    // reader.readAsDataURL(d); // converts the blob to base64 and calls onload
+
+    this.gameBuf = Buffer.from(d.body);
+    this.game = Game.Parse(this.gameBuf);
+    this.fileName = 'game.sav';
+  });
+}
+
 }

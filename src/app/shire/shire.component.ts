@@ -13,6 +13,6 @@ export class ShireComponent implements OnInit {
   ngOnInit() {}
 
   getShireName(id: number): string {
-    return ShireMap['england'][id];
+    return ShireMap['scotland'][id];
   }
 }
