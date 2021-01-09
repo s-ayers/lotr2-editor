@@ -2,18 +2,24 @@ import { Armory } from './Armory.model';
 import { Shire } from './Shire.model';
 import { Army } from './Army.model';
 import { Inventory } from './Inventory.model';
+import { Header } from './Header.model';
+import { Map } from './map/map.model';
 
 export namespace Game {
   export function Parse(buf: Buffer): any {
     const myGame = {};
 
-    myGame['inventory'] = new Inventory(buf);
+    myGame['header'] = new Header(buf);
+    myGame['map'] = new Map(buf);
+
+    myGame['inventory'] = new Inventory(buf, 84864);
     myGame['armory'] = new Armory(buf);
 
     myGame['shires'] = [];
 
     myGame['players'] = [];
     let mynameOffset = 84016;
+    //                264660
     let me = '';
     let c = '';
     do {
