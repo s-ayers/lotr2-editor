@@ -30,7 +30,7 @@ const o =  {
 };
 
 export class Shire {
-    _id: number;
+    id: number;
 
     PlayerId: number;
     Color: number;
@@ -58,7 +58,7 @@ export class Shire {
     constructor(buf: Buffer, id: number = null) {
         const offset = OFFSET + (id * SIZE);
         if (!isNull(id)) {
-            this._id = id;
+            this.id = id;
         }
         this.PlayerId = buf.readUInt8(offset + o.PLAYER_ID);
         this.Color = buf.readUInt8(offset + o.COLOR);
@@ -96,7 +96,7 @@ export class Shire {
 
     Compose(buf: Buffer) {
 
-        const offset =  OFFSET + (this._id * SIZE);
+        const offset =  OFFSET + (this.id * SIZE);
 
         buf.writeUInt8(this.PlayerId, offset + o.PLAYER_ID);
         buf.writeUInt8(this.Color, offset + o.COLOR);
