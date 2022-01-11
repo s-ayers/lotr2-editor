@@ -95,7 +95,7 @@ export class TreeComponent implements OnInit {
     }
   }
 
-  protected percent() {
+  public percent() {
     if ( this.game) {
       return ((this.game.knownBytes() / this.game.size) * 100).toFixed(2);
     }
