@@ -1,3 +1,6 @@
+import { BaseModel } from "./BaseMode.model";
+import { Property } from "./Property.model";
+
 const OFFSET = 99760;
 const SIZE = 420;
 // army 10
@@ -31,7 +34,7 @@ const o = {
   RAMS_SEASONS: 43
 };
 
-export class Army {
+export class Army extends BaseModel {
   _id: number;
   total: number;
   peasants: number;
@@ -60,33 +63,76 @@ export class Army {
   unknown: number;
 
   constructor(buf: Buffer, id: number = 0) {
-    const offset = OFFSET + id * SIZE;
+    super();
+
+    this.offset = OFFSET + id * SIZE;
+    const offset = this.offset;
 
     this._id = id;
+
     this.total = buf.readUInt32LE(offset + o.TOTAL);
+    this.children['Total'] = new Property(buf, (offset + o.TOTAL), 4);
+
     this.peasants = buf.readUInt16LE(offset + o.PEASANTS);
+    this.children['Peasants'] = new Property(buf, (offset + o.PEASANTS), 2);
+
     this.crossbow = buf.readUInt16LE(offset + o.CROSSBOW);
+    this.children['Crossbow'] = new Property(buf, (offset + o.CROSSBOW), 2);
+
     this.mace = buf.readUInt16LE(offset + o.MACE);
+    this.children['Mace'] = new Property(buf, (offset + o.MACE), 2);
+
     this.sword = buf.readUInt16LE(offset + o.SWORD);
+    this.children['Sword'] = new Property(buf, (offset + o.SWORD), 2);
+
     this.pike = buf.readUInt16LE(offset + o.PIKE);
+    this.children['Pike'] = new Property(buf, (offset + o.PIKE), 2);
+
     this.bow = buf.readUInt16LE(offset + o.BOW);
+    this.children['Bow'] = new Property(buf, (offset + o.BOW), 2);
+
     this.knight = buf.readUInt16LE(offset + o.KNIGHT);
+    this.children['Knight'] = new Property(buf, (offset + o.KNIGHT), 2);
+
     this.has_moved = buf.readUInt8(offset + o.MOVEMENT_USED);
+    this.children['Has Moved'] = new Property(buf, (offset + o.MOVEMENT_USED), 1);
 
     this.mercenaryRace = buf.readUInt8(offset + o.MERCENARIES_RACE);
+    this.children['Mercenary Race'] = new Property(buf, (offset + o.MERCENARIES_RACE));
+
     this.mercenaries = buf.readUInt8(offset + o.MERCENARIES);
+    this.children['Mercenary'] = new Property(buf, (offset + o.MERCENARIES));
+
     this.mercenaryType = buf.readUInt8(offset + o.MERCENARIES_TYPE);
+    this.children['Mercenary Type'] = new Property(buf, (offset + o.MERCENARIES_TYPE));
+
     this.mercenaryWage = buf.readUInt32LE(offset + o.WAGE);
+    this.children['Mercenary Wage'] = new Property(buf, (offset + o.WAGE), 4);
 
     this.catapults = buf.readUInt8(offset + o.CATAPULTS);
+    this.children['Catapults'] = new Property(buf, (offset + o.CATAPULTS));
+
     this.catapultsProgress = buf.readUInt8(offset + o.CATAPULTS_PROGRESS);
+    this.children['Catapults Progress'] = new Property(buf, (offset + o.CATAPULTS_PROGRESS));
+
     this.towers = buf.readUInt8(offset + o.TOWERS);
+    this.children['Towers'] = new Property(buf, (offset + o.TOWERS));
+
     this.towersProgress = buf.readUInt8(offset + o.TOWERS_PROGRESS);
+    this.children['Towers Progress'] = new Property(buf, (offset + o.TOWERS_PROGRESS));
+
     this.rams = buf.readUInt8(offset + o.RAMS);
+    this.children['Rams'] = new Property(buf, (offset + o.RAMS));
+
     this.ramsProgress = buf.readUInt8(offset + o.RAMS_PROGRESS);
+    this.children['Rams Progress'] = new Property(buf, (offset + o.RAMS_PROGRESS));
+
     this.total_moves = buf.readUInt8(offset + o.MOVEMENT_TOTAL);
+    this.children['Total Moves'] = new Property(buf, (offset + o.MOVEMENT_TOTAL));
 
     this.name = buf.readUInt8(offset + o.NAME);
+    this.children['Name'] = new Property(buf, (offset + o.NAME));
+
   }
 
   Compose(buf: Buffer) {

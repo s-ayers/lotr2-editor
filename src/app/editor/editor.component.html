@@ -1,56 +1,59 @@
-<ngb-tabset orientation="horizontal">
+<ng-container *ngIf="game">
 
-    <ngb-tab title="Inventory">
-        <ng-template ngbTabContent>
-            <div class="row">
-                <div class="col">
-                    <app-inventory [inventory]="game.inventory"></app-inventory>
+    <ngb-tabset orientation="horizontal">
+
+        <ngb-tab title="Inventory">
+            <ng-template ngbTabContent>
+                <div class="row">
+                    <div class="col">
+                        <app-inventory [inventory]="game.inventory"></app-inventory>
+                    </div>
+                    <div class="col">
+                        <app-armory [armory]="game.armory"></app-armory>
+                    </div>
                 </div>
-                <div class="col">
-                    <app-armory [armory]="game.armory"></app-armory>
-                </div>
-            </div>
 
-        </ng-template>
-    </ngb-tab>
-    
-    <!-- <ngb-tab title="Armory">
-        <ng-template ngbTabContent>
-            
+            </ng-template>
+        </ngb-tab>
 
-        </ng-template>
-    </ngb-tab> -->
+        <!-- <ngb-tab title="Armory">
+            <ng-template ngbTabContent>
 
 
-    <ngb-tab title="Counties">
-        <ng-template ngbTabContent>
-            <app-county-list [shires]="game.shires"></app-county-list>
-
-        </ng-template>
-    </ngb-tab>
-
-    <ngb-tab title="Armies">
-        <ng-template ngbTabContent>
-<app-army-list [armies]="game.armies"></app-army-list>
-
-        </ng-template>
-    </ngb-tab>
-
-</ngb-tabset>
+            </ng-template>
+        </ngb-tab> -->
 
 
-<hr>
+        <ngb-tab title="Counties">
+            <ng-template ngbTabContent>
+                <app-county-list [map]="map" [shires]="game.shires"></app-county-list>
+
+            </ng-template>
+        </ngb-tab>
+
+        <ngb-tab title="Armies">
+            <ng-template ngbTabContent>
+    <app-army-list [armies]="game.armies"></app-army-list>
+
+            </ng-template>
+        </ngb-tab>
+
+    </ngb-tabset>
 
 
-<p>
-    <!-- Form Value: {{ profileForm.value | json }} -->
-</p>
+    <hr>
 
 
-<p>
-    <!-- Form Status: {{ profileForm.status }} -->
-</p>
+    <p>
+        <!-- Form Value: {{ profileForm.value | json }} -->
+    </p>
 
-<p>
-    <!-- <button (click)="updateProfile()">Update Profile</button> -->
-</p>
+
+    <p>
+        <!-- Form Status: {{ profileForm.status }} -->
+    </p>
+
+    <p>
+        <!-- <button (click)="updateProfile()">Update Profile</button> -->
+    </p>
+</ng-container>

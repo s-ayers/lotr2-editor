@@ -1,0 +1,58 @@
+
+<select class="form-control" [(ngModel)]="comparison">
+    <option value="none">None</option>
+    <option value="diff-all">Diff All</option>
+    <option value="linear-progression">Linear Progression</option>
+</select>
+
+<p-table [columns]="cols" [value]="bytes" [paginator]="true" [rows]="10">
+    <ng-template pTemplate="header" let-columns>
+        <tr>
+            <th pSortableColumn="offset">
+                Offset
+                <p-sortIcon field="offset"></p-sortIcon>
+            </th>
+
+            <th>
+                Region
+            </th>
+
+            <th *ngFor="let name of fileNames">{{name}}</th>
+
+        </tr>
+        <tr>
+            <th>
+                <p-columnFilter type="numeric" field="offset" matchMode="gte"></p-columnFilter>
+            </th>
+            <th>
+                <select class="form-control"></select>
+            </th>
+            <th *ngFor="let name of fileNames; let i = index">
+                <p-columnFilter type="numeric" field="value[index]"></p-columnFilter>
+             </th>
+
+
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-byte>
+        <tr>
+            <td>{{byte.offset}}</td>
+            <td> {{Region(byte.offset)}} </td>
+            <td *ngFor="let va of byte.values">{{va}}</td>
+            <!-- <td>{{byte.offset}}</td> -->
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="footer">
+        <tr>
+        <th>
+            <input class="form-control">
+        </th>
+        <th>
+            <!-- <select class="form-control"></select> -->
+        </th>
+        <th *ngFor="let name of fileNames">
+            <!-- <input class="form-control"> -->
+        </th>
+    </tr>
+    </ng-template>
+</p-table>

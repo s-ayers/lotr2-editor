@@ -1,0 +1,47 @@
+#known-meter {
+    background-color: lightgray;
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    width: 100%;
+    position: absolute;
+}
+
+#known-meter > div {
+    border-width: 1px;
+    border-style: dashed;
+    box-shadow: 0 0 1px #fff inset;
+    width: 100%;
+    position: absolute;
+}
+
+.Map {
+    border-color: red;
+
+}
+.Counties {
+    background-color: black;
+}
+.Player {
+    border-color: green;
+    background-color: green;
+}
+
+.Counties {
+    border-color: purple;
+    background-color: purple;
+}
+
+.State {
+    background-color: darkblue;
+}
+
+.Inventory {
+    border-color: blue;
+    background-color: blue;
+}
+
+.Armies {
+    border-color: orange;
+    background-color: orange;
+}

@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+const ShireMap = require('../../../../shires.json');
 
 @Component({
   selector: 'app-county-list',
@@ -7,10 +8,15 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CountyListComponent implements OnInit {
   @Input() shires: any;
+  @Input() map: number;
+
   constructor() {}
 
   ngOnInit() {}
 
+  countyName(id: number) {
+    return ShireMap[this.map][id]|| id.toString();;
+  }
   england(id: number): string {
     const counties = [
       'Duchy of Cornwall',
