@@ -13,13 +13,9 @@
 
 <div class="content" role="main">
 
-  <ng-container *ngIf="!gameBuf">
-    <app-file-drop [file]="file" (hasData)="setFile($event)"></app-file-drop>
-  </ng-container>
 
-<ng-container *ngIf="gameBuf">
-  <app-editor [game]="game" ></app-editor>
-</ng-container>
+
+  <router-outlet></router-outlet>
 
 
   <!-- Footer -->

@@ -1,5 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
+import { Subscription } from 'rxjs';
+import { FileService } from '../../services/file.service';
 
 @Component({
   selector: 'app-toolbar',
@@ -18,8 +20,31 @@ export class ToolbarComponent implements OnInit {
   fileUrl: any = null;
   saved = false;
 
-  constructor(private sanitizer: DomSanitizer) { }
+  subscription: Subscription;
+  files: File[];
+  _active: string;
+
+  get active() {
+    return this._active;
+  }
+  set active(value: string) {
+    this.service.setActive(value);
+    this._active = value;
+  }
+  constructor(private sanitizer: DomSanitizer, private service: FileService) { }
+
   ngOnInit() {
+
+    this.subscription = this.service.getFiles().subscribe(files => {
+      if (files) {
+        if (files.length === 1) {
+          this._active = files[0].hash;
+        }
+        this.files = files;
+      } else {
+        this.files = [];
+      }
+    });
 
   }
 
@@ -36,4 +61,5 @@ export class ToolbarComponent implements OnInit {
   loadDemo() {
     this.demo.emit(true);
   }
+
 }

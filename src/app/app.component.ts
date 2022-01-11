@@ -3,12 +3,14 @@ import {
   Output,
   EventEmitter,
   OnInit,
-  isDevMode
+  isDevMode,
+  HostListener
 } from '@angular/core';
 import { FileSystemFileEntry } from 'ngx-file-drop';
 import { Game } from '../model/Game.model';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { FileService } from './services/file.service';
 
 const Buffer = require('buffer/').Buffer;
 
@@ -26,28 +28,56 @@ export class AppComponent implements OnInit {
   game: any;
   @Output() valueUpdate = new EventEmitter();
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private service: FileService) {
+
+  }
 
   ngOnInit() {
     if (false && isDevMode()) {
-      console.log('Is DEV mode');
       this.http
         .get('assets/game.sav', {
           observe: 'response',
           responseType: 'arraybuffer'
         })
         .subscribe((d) => {
-          console.log(d);
           // let reader = new FileReader();
           // reader.readAsDataURL(d); // converts the blob to base64 and calls onload
 
-          this.gameBuf = Buffer.from(d.body);
-          this.game = Game.Parse(this.gameBuf);
-          this.fileName = 'game.sav';
+          // this.gameBuf = Buffer.from(d.body);
+          // this.game = Game.Parse(this.gameBuf);
+          // this.fileName = 'game.sav';
         });
-    } else {
-      console.log('Not DEV mode');
     }
+  }
+
+  @HostListener('window:drop', ['$event'])
+  onDrop(event) {
+    event.preventDefault();
+
+    if (event.dataTransfer.items) {
+      for (let i = 0; i < event.dataTransfer.items.length; i++) {
+        // If dropped items aren't files, reject them
+        if (event.dataTransfer.items[i].kind === 'file') {
+          const file = event.dataTransfer.items[i].getAsFile();
+
+          this.service.add(file);
+          this.setFile(file);
+        }
+      }
+    } else {
+      // Use DataTransfer interface to access the file(s)
+      for (let i = 0; i < event.dataTransfer.files.length; i++) {
+        // console.log('... file[' + i + '].name = ' + event.dataTransfer.files[i].name);
+        // console.log('isSprint: ' + this.isSprite(event.dataTransfer.files[i].name));
+        // console.log('isPalette: ' + this.isPalette(event.dataTransfer.files[i]));
+      }
+    }
+  }
+
+  @HostListener('window:dragover', ['$event'])
+  onDragOver(event) {
+    event.stopPropagation();
+    event.preventDefault();
   }
 
   setFile(data) {
@@ -58,7 +88,7 @@ export class AppComponent implements OnInit {
 
     reader.onload = (e) => {
       this.gameBuf = Buffer.from(reader.result);
-      this.game = Game.Parse(this.gameBuf);
+      // this.game = Game.Parse(this.gameBuf);
     };
     reader.readAsArrayBuffer(this.file);
   }
@@ -72,7 +102,7 @@ export class AppComponent implements OnInit {
     const reader = new FileReader();
     reader.readAsDataURL(blob); // converts the blob to base64 and calls onload
 
-    reader.onload =  () => {
+    reader.onload = () => {
       link.href = reader.result.toString(); // data url
 
       link.click();
@@ -85,21 +115,19 @@ export class AppComponent implements OnInit {
     this.gameBuf = null;
   }
 
-onLoadDemo(data: boolean) {
-  this.http
-  .get('assets/game.sav', {
-    observe: 'response',
-    responseType: 'arraybuffer'
-  })
-  .subscribe((d) => {
-    console.log(d);
-    // let reader = new FileReader();
-    // reader.readAsDataURL(d); // converts the blob to base64 and calls onload
+  onLoadDemo(data: boolean) {
+    this.http
+      .get('assets/game.sav', {
+        observe: 'response',
+        responseType: 'arraybuffer'
+      })
+      .subscribe((d) => {
+        // let reader = new FileReader();
+        // reader.readAsDataURL(d); // converts the blob to base64 and calls onload
 
-    this.gameBuf = Buffer.from(d.body);
-    this.game = Game.Parse(this.gameBuf);
-    this.fileName = 'game.sav';
-  });
-}
-
+        this.gameBuf = Buffer.from(d.body);
+        // this.game = Game.Parse(this.gameBuf);
+        this.fileName = 'game.sav';
+      });
+  }
 }
