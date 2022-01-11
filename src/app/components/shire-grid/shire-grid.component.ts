@@ -8,9 +8,32 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ShireGridComponent implements OnInit {
 
   @Input() shires: any;
-  constructor() { }
+  @Input() map: number;
 
-  ngOnInit() {
+  constructor() {}
+
+  ngOnInit() {}
+
+
+  england(id: number): string {
+    const counties = [
+      'Duchy of Cornwall',
+      'Wiltshire',
+      'Hampshire',
+      'Kent',
+      'Duchy of Norfolk',
+      'Royal counties',
+      'Gloucestershire',
+      'Dyfed',
+      'Caernarvon',
+      'Staffordshire',
+      'Lincolnshire',
+      'Nottinghamshire',
+      'Lancashire',
+      'Yorkshire'
+    ];
+
+    return counties[id] || id.toString();
   }
 
 }
