@@ -1,9 +1,10 @@
 <ng-container *ngIf="game">
 
-    <ngb-tabset orientation="horizontal">
+    <ul ngbNav #editor="ngbNav" [(activeId)]="active" class="nav-tabs">
 
-        <ngb-tab title="Inventory">
-            <ng-template ngbTabContent>
+        <li [ngbNavItem]="1">
+            <a ngbNavLink>Inventory</a>
+            <ng-template ngbNavContent>
                 <div class="row">
                     <div class="col">
                         <app-inventory [inventory]="game.inventory"></app-inventory>
@@ -12,35 +13,27 @@
                         <app-armory [armory]="game.armory"></app-armory>
                     </div>
                 </div>
-
             </ng-template>
-        </ngb-tab>
-
-        <!-- <ngb-tab title="Armory">
-            <ng-template ngbTabContent>
+        </li>
 
 
-            </ng-template>
-        </ngb-tab> -->
-
-
-        <ngb-tab title="Counties">
-            <ng-template ngbTabContent>
+        <li [ngbNavItem]="2">
+            <a ngbNavLink>Counties</a>
+            <ng-template ngbNavContent>
                 <app-county-list [map]="map" [shires]="game.shires"></app-county-list>
-
             </ng-template>
-        </ngb-tab>
+        </li>
 
-        <ngb-tab title="Armies">
-            <ng-template ngbTabContent>
-    <app-army-list [armies]="game.armies"></app-army-list>
-
+        <li [ngbNavItem]="3">
+            <a ngbNavLink>Armies</a>
+            <ng-template ngbNavContent>
+                <app-army-list [armies]="game.armies"></app-army-list>
             </ng-template>
-        </ngb-tab>
+        </li>
 
-    </ngb-tabset>
+    </ul>
 
-
+    <div [ngbNavOutlet]="editor" class="mt-2"></div>
     <hr>
 
 
