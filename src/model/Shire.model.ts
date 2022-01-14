@@ -1,4 +1,3 @@
-import { isNull } from 'util';
 import { BaseModel } from './BaseMode.model';
 import { Color } from './noble/Color.model';
 import { Name } from './noble/Name.model';
@@ -66,7 +65,7 @@ export class Shire extends BaseModel {
         const offset = OFFSET + (id * SIZE);
         this.offset = offset;
 
-        if (!isNull(id)) {
+        if (id !== null) {
             this.id = id;
         }
         this.PlayerId = buf.readUInt8(offset + o.PLAYER_ID);
