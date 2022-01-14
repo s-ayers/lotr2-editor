@@ -23,12 +23,6 @@ export class Lotr2 extends BaseModel {
     this.children['Armies'] = new Armies(buf);
     this.children['Counties'] = new Counties(buf);
 
-    // this.children['Player'] = new Player(buf);
-    // this.children['Npc 1'] = new Noble(buf, 84943); // 85572
-    // this.children['Npc 2'] = new Noble(buf, 85295); // 85572 // 85292 // 85641
-    // this.children['Npc 3'] = new Noble(buf, 85647); // 85572
-    // this.children['Npc 4'] = new Noble(buf, 85999); // 85572
-
     this.children['Map'] = new Map(buf);
 
     this.children['State'] = new State(buf);

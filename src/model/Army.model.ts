@@ -1,37 +1,67 @@
 import { BaseModel } from "./BaseMode.model";
 import { Property } from "./Property.model";
 
-const OFFSET = 99760;
+const OFFSET = 99760; // 99735
+// const OFFSET = 99735;
 const SIZE = 420;
 // army 10
 // 103960
+// const o = {
+//   NAME: 0,
+//   MOVEMENT_USED: 4,
+//   MOVEMENT_TOTAL: 5,
+//   WAGE: 13,
+//   TOTAL: 25,
+//   PEASANTS: 29,
+//   CROSSBOW: 31,
+//   MACE: 33,
+//   SWORD: 35,
+//   PIKE: 37,
+//   BOW: 39,
+//   KNIGHT: 41,
+
+//   MERCENARIES_TYPE: 70,
+//   MERCENARIES: 71,
+//   MERCENARIES_RACE: 72,
+
+//   CATAPULTS: 51,
+//   CATAPULTS_PROGRESS: 53,
+//   CATAPULTS_SEASONS: 56,
+//   TOWERS: 57,
+//   TOWERS_PROGRESS: 59,
+//   TOWERS_SEASONS: 62,
+//   RAMS: 63,
+//   RAMS_PROGRESS: 65,
+//   RAMS_SEASONS: 68,
+// };
+
 const o = {
-  NAME: -25,
-  MOVEMENT_USED: -21,
-  MOVEMENT_TOTAL: -20,
-  WAGE: -12,
-  TOTAL: 0,
-  PEASANTS: 4,
-  CROSSBOW: 6,
-  MACE: 8,
-  SWORD: 10,
-  PIKE: 12,
-  BOW: 14,
-  KNIGHT: 16,
+  NAME: -25, // 0
+  MOVEMENT_USED: -21, // 4
+  MOVEMENT_TOTAL: -20, // 5
+  WAGE: -12, // 13
+  TOTAL: 0, // 25
+  PEASANTS: 4, // 29
+  CROSSBOW: 6, // 31
+  MACE: 8, // 33
+  SWORD: 10, // 35
+  PIKE: 12, // 37
+  BOW: 14, // 39
+  KNIGHT: 16, // 41
 
-  MERCENARIES_TYPE: 45,
-  MERCENARIES: 46,
-  MERCENARIES_RACE: 47,
+  MERCENARIES_TYPE: 45, // 70
+  MERCENARIES: 46, // 71
+  MERCENARIES_RACE: 47, // 72
 
-  CATAPULTS: 26,
-  CATAPULTS_PROGRESS: 28,
-  CATAPULTS_SEASONS: 31,
-  TOWERS: 32,
-  TOWERS_PROGRESS: 34,
-  TOWERS_SEASONS: 37,
-  RAMS: 38,
-  RAMS_PROGRESS: 40,
-  RAMS_SEASONS: 43
+  CATAPULTS: 26, // 51
+  CATAPULTS_PROGRESS: 28, // 53
+  CATAPULTS_SEASONS: 31, // 56
+  TOWERS: 32, // 57
+  TOWERS_PROGRESS: 34, // 59
+  TOWERS_SEASONS: 37, // 62
+  RAMS: 38, // 63
+  RAMS_PROGRESS: 40, // 65
+  RAMS_SEASONS: 43 // 68
 };
 
 export class Army extends BaseModel {
