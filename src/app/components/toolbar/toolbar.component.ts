@@ -2,6 +2,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { Subscription } from 'rxjs';
 import { FileService } from '../../services/file.service';
+import { faSave, faBan, faBullhorn, faDownload } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-toolbar',
@@ -19,6 +20,11 @@ export class ToolbarComponent implements OnInit {
   @Output() demo: EventEmitter<boolean> = new EventEmitter<boolean>();
   fileUrl: any = null;
   saved = false;
+
+  faSave = faSave;
+  faBan = faBan;
+  faBullhorn = faBullhorn;
+  faDownload = faDownload;
 
   subscription: Subscription;
   files: File[];

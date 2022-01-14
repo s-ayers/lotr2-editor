@@ -13,6 +13,7 @@ import { FileService } from '../services/file.service';
 export class EditorComponent implements OnInit {
   game: any;
   map: number;
+  active = 1;
 
   constructor(private fb: FormBuilder, private service: FileService) {}
 
