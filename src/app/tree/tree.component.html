@@ -1,0 +1,29 @@
+<h1>
+  {{ regionPercent()}} %  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  {{percent()}} %
+</h1>
+
+<div class="row">
+    <div class="col-1">
+        <div id="known-meter">
+
+            <div class="Player" [style.height]="calculateHeight('Nobles')" [style.top]="calculateTop('Nobles')"></div>
+
+            <!-- <div class="Armory" [style.height]="calculateHeight('Armory')" [style.top]="calculateTop('Armory')"></div> -->
+            <div class="Counties" [style.height]="calculateHeight('Counties')" [style.top]="calculateTop('Counties')"></div>
+            <div class="Armies" [style.height]="calculateHeight('Armies')" [style.top]="calculateTop('Armies')"></div>
+<div class="State" [style.height]="calculateHeight('State')" [style.top]="calculateTop('State')"></div>
+            <div class="Map" [style.height]="calculateHeight('Map')" [style.top]="calculateTop('Map')"></div>
+        </div>
+    </div>
+
+    <div class="col-11">
+        <p-tree [value]="nodes">
+            <ng-template let-node  pTemplate="default">
+                <input [(ngModel)]="node.label" type="text" style="width:100%">
+            </ng-template>
+        </p-tree>
+    </div>
+
+</div>
+
+

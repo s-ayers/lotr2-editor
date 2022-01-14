@@ -1,15 +1,19 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-county-list',
-  templateUrl: './county-list.component.html',
-  styleUrls: ['./county-list.component.css']
+  selector: 'app-shire-grid',
+  templateUrl: './shire-grid.component.html',
+  styleUrls: ['./shire-grid.component.css']
 })
-export class CountyListComponent implements OnInit {
+export class ShireGridComponent implements OnInit {
+
   @Input() shires: any;
+  @Input() map: number;
+
   constructor() {}
 
   ngOnInit() {}
+
 
   england(id: number): string {
     const counties = [
@@ -31,4 +35,5 @@ export class CountyListComponent implements OnInit {
 
     return counties[id] || id.toString();
   }
+
 }
