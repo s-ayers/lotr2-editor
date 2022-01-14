@@ -1,4 +1,3 @@
-import { isNull } from 'util';
 import { BaseModel } from './BaseMode.model';
 import { Color } from './noble/Color.model';
 import { Name } from './noble/Name.model';
@@ -35,7 +34,7 @@ const o =  {
 export class Shire extends BaseModel {
     size = 768;
 
-    _id: number;
+    id: number;
 
     PlayerId: number;
     Color: number;
@@ -66,8 +65,8 @@ export class Shire extends BaseModel {
         const offset = OFFSET + (id * SIZE);
         this.offset = offset;
 
-        if (!isNull(id)) {
-            this._id = id;
+        if (id !== null) {
+            this.id = id;
         }
         this.PlayerId = buf.readUInt8(offset + o.PLAYER_ID);
         this.children['Player Id'] = new Name(buf, (offset + o.PLAYER_ID));
@@ -133,7 +132,7 @@ export class Shire extends BaseModel {
 
     Compose(buf: Buffer) {
 
-        const offset =  OFFSET + (this._id * SIZE);
+        const offset =  OFFSET + (this.id * SIZE);
 
         buf.writeUInt8(this.PlayerId, offset + o.PLAYER_ID);
         buf.writeUInt8(this.Color, offset + o.COLOR);

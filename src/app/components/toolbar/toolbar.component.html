@@ -24,24 +24,24 @@
   <div class="spacer"></div>
   <div *ngIf="fileUrl" style="margin-right:25px;margin-top:5px;">
       <a [href]="fileUrl" download="{{name}}">
-        <fa name="download" inverse="true" size="2x"></fa>
+        <fa-icon [icon]="faDownload" inverse="true"fa-iconize="2x"></fa-icon>
       </a>
     </div>
 
     <div *ngIf="!name" style="margin-right:25px;margin-top:5px;">
       <a (click)="loadDemo()" >
-        <fa name="bullhorn" size="2x"></fa>
+        <fa-icon [icon]="faBullhorn" size="2x"></fa-icon>
       </a>
     </div>
 
   <div *ngIf="name" style="margin-right:25px;margin-top:5px;">
     <a (click)="clearFile()" >
-      <fa name="ban" size="2x"></fa>
+      <fa-icon [icon]="faBan" size="2x"></fa-icon>
     </a>
   </div>
   <div *ngIf="name" style="margin-right:25px;margin-top:5px;">
   <a (click)="saveGame()" >
-      <fa name="save" size="2x"></fa>
+      <fa-icon [icon]="faSave" size="2x"></fa-icon>
     </a>
   </div>
 </div>
