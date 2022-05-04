@@ -10,6 +10,7 @@ export class ArmyComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    // console.log(this.army);
   }
 
 }

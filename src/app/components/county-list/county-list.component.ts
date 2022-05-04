@@ -15,26 +15,7 @@ export class CountyListComponent implements OnInit {
   ngOnInit() {}
 
   countyName(id: number) {
-    return ShireMap[this.map][id]|| id.toString();;
+    return ShireMap[this.map][id]|| id.toString();
   }
-  england(id: number): string {
-    const counties = [
-      'Duchy of Cornwall',
-      'Wiltshire',
-      'Hampshire',
-      'Kent',
-      'Duchy of Norfolk',
-      'Royal counties',
-      'Gloucestershire',
-      'Dyfed',
-      'Caernarvon',
-      'Staffordshire',
-      'Lincolnshire',
-      'Nottinghamshire',
-      'Lancashire',
-      'Yorkshire'
-    ];
 
-    return counties[id] || id.toString();
-  }
 }
