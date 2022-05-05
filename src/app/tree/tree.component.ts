@@ -67,12 +67,12 @@ export class TreeComponent implements OnInit {
     }
 
     const node = {
-      "label": label,
-      "offset": value.offset,
+      label: label,
+      offset: value.offset,
       // "data": "Documents Folder",
       // "expandedIcon": "pi pi-folder-open",
       // "collapsedIcon": "pi pi-folder",
-      "children": children
+      children: children
 
     };
 

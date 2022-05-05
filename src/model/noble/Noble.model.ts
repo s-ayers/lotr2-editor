@@ -1,8 +1,8 @@
-import { BaseModel } from "../BaseMode.model";
-import { NpcName } from "./NpcName.model";
+import { BaseModel } from '../BaseMode.model';
+import { NpcName } from './NpcName.model';
 import { Color } from './Color.model';
-import { Inventory } from "../Inventory.model";
-import { Armory } from "../Armory.model";
+import { Inventory } from '../Inventory.model';
+import { Armory } from '../Armory.model';
 
 export class Noble extends BaseModel {
     size = 352;

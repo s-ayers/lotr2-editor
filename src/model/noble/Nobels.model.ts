@@ -1,6 +1,6 @@
-import { BaseModel } from "../BaseMode.model";
-import { Noble } from "./Noble.model";
-import { Player } from "./Player.model";
+import { BaseModel } from '../BaseMode.model';
+import { Noble } from './Noble.model';
+import { Player } from './Player.model';
 
 
 export class Nobels extends BaseModel {

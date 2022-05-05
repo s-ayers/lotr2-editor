@@ -1,5 +1,5 @@
-import { BaseModel } from "./BaseMode.model";
-import { Property } from "./Property.model";
+import { BaseModel } from './BaseMode.model';
+import { Property } from './Property.model';
 
 const o = {
     GOLD: 0,

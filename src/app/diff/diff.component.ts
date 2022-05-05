@@ -35,17 +35,17 @@ export class DiffComponent implements OnInit {
     this.subscription = this.service.getFiles().subscribe((files) => {
 
 
-      if (files.length == 0 ) {
+      if (files.length === 0 ) {
         return;
       }
 
-      if (this.comparison == 'none') {
+      if (this.comparison === 'none') {
         this.raw(files);
       }
-      if (this.comparison == 'diff-all') {
+      if (this.comparison === 'diff-all') {
         this.diffAll(files);
       }
-      if (this.comparison == 'linear-progression') {
+      if (this.comparison === 'linear-progression') {
         this.linear(files);
       }
 
