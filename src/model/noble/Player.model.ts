@@ -1,9 +1,9 @@
-import { Armory } from "../Armory.model";
-import { BaseModel } from "../BaseMode.model";
-import { Inventory } from "../Inventory.model";
-import { Property } from "../Property.model";
-import { Color } from "./Color.model";
-import { PlayerName } from "./PlayerName.mode";
+import { Armory } from '../Armory.model';
+import { BaseModel } from '../BaseMode.model';
+import { Inventory } from '../Inventory.model';
+import { Property } from '../Property.model';
+import { Color } from './Color.model';
+import { PlayerName } from './PlayerName.mode';
 
 export class Player extends BaseModel {
     offset = 84016;
@@ -18,7 +18,7 @@ export class Player extends BaseModel {
             this.children['Color A'] = new Color(buf, 84049);
             this.children['Color B'] = new Color(buf, 84594);
 
-            this.children['Inventory'] = new Inventory(buf, 84864); //85216
+            this.children['Inventory'] = new Inventory(buf, 84864);
             this.children['Armory'] = new Armory(buf);
         }
 

@@ -1,4 +1,4 @@
-import { Property } from "../Property.model";
+import { Property } from '../Property.model';
 
 
 const list = [

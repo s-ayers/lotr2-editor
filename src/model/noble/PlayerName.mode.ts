@@ -1,4 +1,4 @@
-import { BaseModel } from "../BaseMode.model";
+import { BaseModel } from '../BaseMode.model';
 
 export class PlayerName extends BaseModel {
  offset = 84016;

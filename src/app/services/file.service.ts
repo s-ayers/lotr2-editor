@@ -13,7 +13,7 @@ export class FileService {
 
   constructor() {
     this.subject = new BehaviorSubject<object[]>([]);
-    this.active = new BehaviorSubject<Object>({})
+    this.active = new BehaviorSubject<object>({})
 
   }
 

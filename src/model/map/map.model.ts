@@ -1,5 +1,5 @@
-import { BaseModel } from "../BaseMode.model";
-import { Name } from "./name.model";
+import { BaseModel } from '../BaseMode.model';
+import { Name } from './name.model';
 
 export class Map extends BaseModel {
     offset = 264660;

@@ -1,5 +1,5 @@
-import { BaseModel } from "./BaseMode.model";
-import { Property } from "./Property.model";
+import { BaseModel } from './BaseMode.model';
+import { Property } from './Property.model';
 
 const OFFSET = 99760; // 99735
 // const OFFSET = 99735;
