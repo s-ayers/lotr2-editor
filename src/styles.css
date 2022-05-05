@@ -3,3 +3,7 @@
 .ngx-file-drop__drop-zone {
     height: 600px !important;
   }
+
+  :root {
+    --player-color: #DEB887;
+   }

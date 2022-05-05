@@ -14,7 +14,7 @@ export class Noble extends BaseModel {
             this.children['Name'] = new NpcName(buf, offset);
             this.children['Color'] = new Color(buf, offset + 3);
 
-            this.children['Inventory'] = new Inventory(buf, offset + 273); //85216 85572
+            this.children['Inventory'] = new Inventory(buf, offset + 273); // 85216 85572
             this.children['Armory'] = new Armory(buf, offset + 313);
         }
 
